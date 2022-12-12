@@ -22,7 +22,7 @@ DerivedData/
 !*.xcodeproj/xcshareddata/
 !*.xcworkspace/contents.xcworkspacedata
 ## library
-Pods/*
+Pods/
 Carthage/Build/
 ## Other
 *.moved-aside
