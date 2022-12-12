@@ -18,37 +18,37 @@ import Foundation
 //}
 
 struct Model {
-    let NameLabel: String
-    let TagLabel: String?
+    let Name: String
+    let Tag: String?
     
     static func createModels() -> [Model] {
         return [
-            Model(NameLabel: "AAAAAAAAAA", TagLabel: "aaaaaaaaaa"),
-            Model(NameLabel: "BBBBBBBBBB", TagLabel: "bbbbbbbbbb"),
-            Model(NameLabel: "CCCCCCCCCC", TagLabel: "cccccccccc"),
-            Model(NameLabel: "DDDDDDDDDD", TagLabel: "dddddddddd"),
-            Model(NameLabel: "EEEEEEEEEE", TagLabel: "eeeeeeeeee"),
-            Model(NameLabel: "FFFFFFFFFF", TagLabel: "ffffffffff"),
-            Model(NameLabel: "GGGGGGGGGG", TagLabel: "gggggggggg"),
-            Model(NameLabel: "HHHHHHHHHH", TagLabel: "hhhhhhhhhh"),
-            Model(NameLabel: "IIIIIIIIII", TagLabel: "iiiiiiiiii"),
-            Model(NameLabel: "JJJJJJJJJJ", TagLabel: "jjjjjjjjjj"),
-            Model(NameLabel: "KKKKKKKKKK", TagLabel: "kkkkkkkkkk"),
-            Model(NameLabel: "LLLLLLLLLL", TagLabel: "llllllllll"),
-            Model(NameLabel: "MMMMMMMMMM", TagLabel: "mmmmmmmmmm"),
-            Model(NameLabel: "NNNNNNNNNN", TagLabel: nil),
-            Model(NameLabel: "OOOOOOOOOO", TagLabel: nil),
-            Model(NameLabel: "PPPPPPPPPP", TagLabel: nil),
-            Model(NameLabel: "QQQQQQQQQQ", TagLabel: nil),
-            Model(NameLabel: "RRRRRRRRRR", TagLabel: nil),
-            Model(NameLabel: "SSSSSSSSSS", TagLabel: nil),
-            Model(NameLabel: "TTTTTTTTTT", TagLabel: nil),
-            Model(NameLabel: "UUUUUUUUUU", TagLabel: nil),
-            Model(NameLabel: "VVVVVVVVVV", TagLabel: nil),
-            Model(NameLabel: "WWWWWWWWWW", TagLabel: nil),
-            Model(NameLabel: "XXXXXXXXXX", TagLabel: nil),
-            Model(NameLabel: "YYYYYYYYYY", TagLabel: nil),
-            Model(NameLabel: "ZZZZZZZZZZ", TagLabel: nil),
+            Model(Name: "AAAAAAAAAA", Tag: "aaaaaaaaaa"),
+            Model(Name: "BBBBBBBBBB", Tag: "bbbbbbbbbb"),
+            Model(Name: "CCCCCCCCCC", Tag: "cccccccccc"),
+            Model(Name: "DDDDDDDDDD", Tag: "dddddddddd"),
+            Model(Name: "EEEEEEEEEE", Tag: "eeeeeeeeee"),
+            Model(Name: "FFFFFFFFFF", Tag: "ffffffffff"),
+            Model(Name: "GGGGGGGGGG", Tag: "gggggggggg"),
+            Model(Name: "HHHHHHHHHH", Tag: "hhhhhhhhhh"),
+            Model(Name: "IIIIIIIIII", Tag: "iiiiiiiiii"),
+            Model(Name: "JJJJJJJJJJ", Tag: "jjjjjjjjjj"),
+            Model(Name: "KKKKKKKKKK", Tag: "kkkkkkkkkk"),
+            Model(Name: "LLLLLLLLLL", Tag: "llllllllll"),
+            Model(Name: "MMMMMMMMMM", Tag: "mmmmmmmmmm"),
+            Model(Name: "NNNNNNNNNN", Tag: nil),
+            Model(Name: "OOOOOOOOOO", Tag: nil),
+            Model(Name: "PPPPPPPPPP", Tag: nil),
+            Model(Name: "QQQQQQQQQQ", Tag: nil),
+            Model(Name: "RRRRRRRRRR", Tag: nil),
+            Model(Name: "SSSSSSSSSS", Tag: nil),
+            Model(Name: "TTTTTTTTTT", Tag: nil),
+            Model(Name: "UUUUUUUUUU", Tag: nil),
+            Model(Name: "VVVVVVVVVV", Tag: nil),
+            Model(Name: "WWWWWWWWWW", Tag: nil),
+            Model(Name: "XXXXXXXXXX", Tag: nil),
+            Model(Name: "YYYYYYYYYY", Tag: nil),
+            Model(Name: "ZZZZZZZZZZ", Tag: nil),
         ]
     }
 }

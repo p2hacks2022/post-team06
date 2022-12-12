@@ -12,12 +12,12 @@ class CustomCellCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var NameLabel: UILabel!
     @IBOutlet weak var TagLabel: UILabel!
     @IBOutlet weak var SorenaLabel: UILabel!
-    @IBOutlet weak var MainImage: UIImageView!    
+    @IBOutlet weak var MainImage: UIImageView!
     @IBOutlet weak var SorenaImage: UIImageView!
     
     func setupCell(model: Model){
-        NameLabel.text = model.NameLabel
-        if let text = model.TagLabel{
+        NameLabel.text = model.Name
+        if let text = model.Tag{
             TagLabel.text = text
         }
         self.backgroundColor = .white
