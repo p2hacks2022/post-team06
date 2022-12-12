@@ -8,16 +8,21 @@
 import UIKit
 
 class CustomCellCollectionViewCell: UICollectionViewCell {
+    
     @IBOutlet weak var NameLabel: UILabel!
     @IBOutlet weak var TagLabel: UILabel!
+    @IBOutlet weak var SorenaLabel: UILabel!
+    @IBOutlet weak var MainImage: UIImageView!    
+    @IBOutlet weak var SorenaImage: UIImageView!
     
     func setupCell(model: Model){
         NameLabel.text = model.NameLabel
         if let text = model.TagLabel{
             TagLabel.text = text
         }
+        self.backgroundColor = .white
+    
         
-        self.backgroundColor = .lightGray
     }
     
     override func awakeFromNib() {

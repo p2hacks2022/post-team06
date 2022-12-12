@@ -24,6 +24,9 @@ class ItiranViewController: UIViewController {
         // セルの大きさを設定
         let layout = UICollectionViewFlowLayout()
         layout.itemSize = CGSize(width: collectionview.frame.width, height: 159)
+        layout.minimumLineSpacing = 0
+    
+        
         collectionview.collectionViewLayout = layout
     }
 }
@@ -36,6 +39,9 @@ extension ItiranViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         //セルオブジェクトを取り出し、セルにモデルオブジェクトを渡して設定を行う
         let cell = collectionview.dequeueReusableCell(withReuseIdentifier: "CustomCellCollectionViewCell", for: indexPath)
+        
+        cell.layer.borderColor = UIColor.lightGray.cgColor
+        cell.layer.borderWidth = 0.5
 
         if let cell = cell as? CustomCellCollectionViewCell {
             cell.setupCell(model: models[indexPath.row])

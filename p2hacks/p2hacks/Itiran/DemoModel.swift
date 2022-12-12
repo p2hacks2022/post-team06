@@ -7,6 +7,16 @@
 
 import Foundation
 
+//struct Model:Codable{
+//    let name_id: Int
+//    let name: String
+//    let tag_main: Int
+//    let tag_sub: String
+//    let date: Date
+//    let explanation: String
+//
+//}
+
 struct Model {
     let NameLabel: String
     let TagLabel: String?
