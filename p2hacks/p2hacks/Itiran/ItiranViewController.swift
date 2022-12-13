@@ -10,6 +10,9 @@ import UIKit
 class ItiranViewController: UIViewController {
     @IBOutlet weak var TitleImage: UIImageView!
     @IBOutlet weak var collectionview: UICollectionView! //collectionview
+    @IBOutlet weak var PostButton: UIButton!
+    
+    //一覧画面から投稿画面への遷移
     @IBAction func PostButton(_ sender: Any) {
         // storyboardのインスタンス取得
         let storyboard: UIStoryboard = UIStoryboard(name: "Post", bundle: nil)
@@ -18,13 +21,29 @@ class ItiranViewController: UIViewController {
         // 画面遷移
         self.present(nextView, animated: true, completion: nil)
     }
-    @IBOutlet weak var PostButton: UIButton!
     
    let models = Model.createModels()
     
     override func viewDidLayoutSubviews(){
         super.viewDidLayoutSubviews()
         
+        // Segue 準備
+        func prepare(for segue: UIStoryboardSegue, sender: Any!) {
+                if (segue.identifier == "toDetail") {
+                    let detailVC: DetailViewController = (segue.destination as? DetailViewController)!
+                }
+            }
+        
+        func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+             
+            // [indexPath.row] から画像名を探し、UImage を設定
+            selectedImage = UIImage(named: photos[indexPath.row])
+            if selectedImage != nil {
+                // SubViewController へ遷移するために Segue を呼び出す
+                performSegue(withIdentifier: "toSubViewController",sender: nil)
+            }
+        }
+             
         
         collectionview.dataSource = self
         

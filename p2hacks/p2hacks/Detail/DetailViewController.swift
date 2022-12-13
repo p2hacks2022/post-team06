@@ -8,11 +8,19 @@
 import UIKit
 
 class DetailViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    @IBOutlet weak var TitleImage: UIImageView!
+    
+    override func viewDidLayoutSubviews(){
+        super.viewDidLayoutSubviews()
+       
+        //画面の中心を表す
+        let ViewWidth = Float(UIScreen.main.bounds.size.width)
+        //アイコンを中心に表示
+        let IconWidthGap = (ViewWidth - Float(TitleImage.frame.width)) / 2
+        TitleImage.frame = CGRect.init(x: CGFloat(IconWidthGap),
+                                       y: TitleImage.frame.minY,
+                                       width: TitleImage.frame.width,
+                                       height: TitleImage.frame.height)
     }
     
 
@@ -25,5 +33,6 @@ class DetailViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+        
 
 }
