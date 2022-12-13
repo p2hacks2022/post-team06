@@ -8,15 +8,26 @@
 import UIKit
 
 class ItiranViewController: UIViewController {
-    @IBOutlet weak var TopLabel: UILabel! //ヘッダー部分
+    @IBOutlet weak var TitleImage: UIImageView!
     @IBOutlet weak var collectionview: UICollectionView! //collectionview
     
    let models = Model.createModels()
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewDidLayoutSubviews(){
+        super.viewDidLayoutSubviews()
+        
         
         collectionview.dataSource = self
+        
+        //画面の中心を表す
+        let ViewWidth = Float(UIScreen.main.bounds.size.width)
+        //アイコンを中心に表示
+        let IconWidthGap = (ViewWidth - Float(TitleImage.frame.width)) / 2
+        TitleImage.frame = CGRect.init(x: CGFloat(IconWidthGap),
+                                      y: TitleImage.frame.minY,
+                                      width: TitleImage.frame.width,
+                                      height: TitleImage.frame.height)
+        
 
         //コレクションビューで使用するセルを登録
         collectionview!.register(UINib(nibName: "CustomCellCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "CustomCellCollectionViewCell")
