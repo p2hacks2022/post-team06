@@ -23,6 +23,9 @@
 		92BF08B82944868100E37B14 /* p2hacksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BF08B72944868100E37B14 /* p2hacksTests.swift */; };
 		92BF08C22944868100E37B14 /* p2hacksUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BF08C12944868100E37B14 /* p2hacksUITests.swift */; };
 		92BF08C42944868100E37B14 /* p2hacksUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BF08C32944868100E37B14 /* p2hacksUITestsLaunchTests.swift */; };
+		92FCA4D4294757E400297B5B /* CustomCellCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FCA4D2294757E400297B5B /* CustomCellCollectionViewCell.swift */; };
+		92FCA4D5294757E400297B5B /* CustomCellCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92FCA4D3294757E400297B5B /* CustomCellCollectionViewCell.xib */; };
+		92FCA4D72947612400297B5B /* DemoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FCA4D62947612400297B5B /* DemoModel.swift */; };
 		B6AC6944F081A1B8ADFCD27D /* Pods_p2hacksTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DE6FD39B1F35B0F2A497FF3 /* Pods_p2hacksTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -65,6 +68,9 @@
 		92BF08BD2944868100E37B14 /* p2hacksUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = p2hacksUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		92BF08C12944868100E37B14 /* p2hacksUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = p2hacksUITests.swift; sourceTree = "<group>"; };
 		92BF08C32944868100E37B14 /* p2hacksUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = p2hacksUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		92FCA4D2294757E400297B5B /* CustomCellCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCellCollectionViewCell.swift; sourceTree = "<group>"; };
+		92FCA4D3294757E400297B5B /* CustomCellCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCellCollectionViewCell.xib; sourceTree = "<group>"; };
+		92FCA4D62947612400297B5B /* DemoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoModel.swift; sourceTree = "<group>"; };
 		C178589942D1E8CB850C3416 /* Pods_p2hacks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_p2hacks.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBAB89BF4AAA917E1787B6AB /* Pods_p2hacks_p2hacksUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_p2hacks_p2hacksUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D33C7071CF22C67C21C609B5 /* Pods-p2hacksTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-p2hacksTests.debug.xcconfig"; path = "Target Support Files/Pods-p2hacksTests/Pods-p2hacksTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -106,6 +112,9 @@
 			children = (
 				92BF08A32944868000E37B14 /* Itiran.storyboard */,
 				92BF08A12944868000E37B14 /* ItiranViewController.swift */,
+				92FCA4D3294757E400297B5B /* CustomCellCollectionViewCell.xib */,
+				92FCA4D2294757E400297B5B /* CustomCellCollectionViewCell.swift */,
+				92FCA4D62947612400297B5B /* DemoModel.swift */,
 			);
 			path = Itiran;
 			sourceTree = "<group>";
@@ -317,6 +326,7 @@
 			files = (
 				8730B96C29474D89006BB0C3 /* Post.storyboard in Resources */,
 				92BF08AD2944868100E37B14 /* LaunchScreen.storyboard in Resources */,
+				92FCA4D5294757E400297B5B /* CustomCellCollectionViewCell.xib in Resources */,
 				92BF08AA2944868100E37B14 /* Assets.xcassets in Resources */,
 				8730B96E29474DA3006BB0C3 /* Detail.storyboard in Resources */,
 				92BF08A52944868000E37B14 /* Itiran.storyboard in Resources */,
@@ -447,11 +457,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92FCA4D72947612400297B5B /* DemoModel.swift in Sources */,
 				8730B97229474E08006BB0C3 /* PostViewController.swift in Sources */,
 				92BF08A82944868000E37B14 /* p2hacks.xcdatamodeld in Sources */,
 				92BF08A22944868000E37B14 /* ItiranViewController.swift in Sources */,
 				8730B97029474DB4006BB0C3 /* DetailViewController.swift in Sources */,
 				92BF089E2944868000E37B14 /* AppDelegate.swift in Sources */,
+				92FCA4D4294757E400297B5B /* CustomCellCollectionViewCell.swift in Sources */,
 				92BF08A02944868000E37B14 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -630,7 +642,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = BWL68L4987;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = p2hacks/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -638,6 +650,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Itiran;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -659,7 +672,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = BWL68L4987;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = p2hacks/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -667,6 +680,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Itiran;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
