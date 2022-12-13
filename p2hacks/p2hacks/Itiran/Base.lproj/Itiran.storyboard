@@ -35,11 +35,27 @@
                                     <constraint firstAttribute="height" constant="37" id="NUt-G5-kKo"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a8v-nR-wbu">
+                                <rect key="frame" x="330" y="798" width="64" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="MK1-ED-1NF"/>
+                                    <constraint firstAttribute="width" constant="64" id="gxl-th-Qyb"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Button" image="post">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="PostButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oA9-Bo-YIR"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="a8v-nR-wbu" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="5tu-by-xsT"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Vqv-qZ-Bcd" secondAttribute="bottom" constant="515" id="8GI-jq-G17"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="a8v-nR-wbu" secondAttribute="trailing" constant="20" id="G7h-vm-WHd"/>
                             <constraint firstItem="Vqv-qZ-Bcd" firstAttribute="top" secondItem="bg5-YQ-brl" secondAttribute="bottom" constant="114" id="RFw-b4-qai"/>
                             <constraint firstAttribute="bottom" secondItem="Vqv-qZ-Bcd" secondAttribute="bottom" id="Uia-QX-hIV"/>
                             <constraint firstItem="Vqv-qZ-Bcd" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="goH-kc-qe7"/>
@@ -48,7 +64,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="TitleImage" destination="bg5-YQ-brl" id="JII-ZZ-yCT"/>
+                        <outlet property="PostButton" destination="a8v-nR-wbu" id="88l-Kc-E40"/>
+                        <outlet property="TitleImage" destination="bg5-YQ-brl" id="EtH-ln-uGp"/>
                         <outlet property="collectionview" destination="Vqv-qZ-Bcd" id="iHC-XA-ANx"/>
                     </connections>
                 </viewController>
@@ -58,6 +75,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="post" width="295" height="295"/>
         <image name="title" width="272" height="65"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
