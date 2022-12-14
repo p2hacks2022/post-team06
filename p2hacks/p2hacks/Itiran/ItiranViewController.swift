@@ -34,6 +34,7 @@ class ItiranViewController: UIViewController {
                 }
             }
         
+<<<<<<< HEAD
         //collectionviewから何かの値を取得して遷移
         func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
             // [indexPath.row] から画像名を探し、UImage を設定
@@ -44,6 +45,10 @@ class ItiranViewController: UIViewController {
             }
         }
              
+=======
+        //POSTDATAに入っているデータの確認用
+        print("🟥全てのデータ\(POSTDATA)")
+>>>>>>> main
         
         collectionview.dataSource = self
         
