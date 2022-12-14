@@ -11,6 +11,8 @@ class PostViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     
     @IBOutlet weak var batsuButton: UIImageView!
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var subjectText: UITextField!
+    @IBOutlet weak var hashtagText: UITextField!
     @IBOutlet weak var descriptionTextView: PlaceTextView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +23,7 @@ class PostViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         batsuButton.isUserInteractionEnabled = true
         batsuButton.addGestureRecognizer(UITapGestureRecognizer(target: self, action:#selector(batsuButtonTapped(_:))))
         //textViewにplaceHolderを設定
-        descriptionTextView.placeHolder = "入力してください。"
+        descriptionTextView.placeHolder = "説明を入力してください。"
         // Do any additional setup after loading the view.
     }
     //imageViewがタップされた時の動作
