@@ -59,7 +59,7 @@ class PostViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         let dateFormatter = DateFormatter()
         // DateFormatter を使用して書式とロケールを指定する
         dateFormatter.dateFormat = DateFormatter.dateFormat(fromTemplate: "yMMMdHms", options: 0, locale: Locale(identifier: "ja_JP"))
-        post.id += 1
+        post.id = 0
         post.sorena = 0
         post.name = subjectText.text!
         post.hashtag = ""
@@ -73,6 +73,14 @@ class PostViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         subjectText.text = ""
         hashtagText.text = ""
         descriptionTextView.text = ""
+        // storyboardのインスタンス取得
+        let itiranStoryboard: UIStoryboard = UIStoryboard(name: "Itiran", bundle: nil)
+        // 遷移先ViewControllerのインスタンス取得
+        let ItiranView = itiranStoryboard.instantiateViewController(withIdentifier: "Itiran") as! ItiranViewController
+        // フルスクリーンにする
+        ItiranView.modalPresentationStyle = .fullScreen
+        // 画面遷移
+        self.present(ItiranView, animated: false, completion: nil)
     }
     //バツボタンがタップされた時の戻る動作
     @objc func batsuButtonTapped(_ sender: UITapGestureRecognizer) {

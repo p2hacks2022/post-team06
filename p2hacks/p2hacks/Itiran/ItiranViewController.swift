@@ -12,11 +12,11 @@ class ItiranViewController: UIViewController {
     @IBOutlet weak var collectionview: UICollectionView! //collectionview
     @IBAction func PostButton(_ sender: Any) {
         // storyboardのインスタンス取得
-        let storyboard: UIStoryboard = UIStoryboard(name: "Post", bundle: nil)
+        let postStoryboard: UIStoryboard = UIStoryboard(name: "Post", bundle: nil)
         // 遷移先ViewControllerのインスタンス取得
-        let nextView = storyboard.instantiateViewController(withIdentifier: "Post") as! PostViewController
+        let postView = postStoryboard.instantiateViewController(withIdentifier: "Post") as! PostViewController
         // 画面遷移
-        self.present(nextView, animated: true, completion: nil)
+        self.present(postView, animated: true, completion: nil)
     }
     @IBOutlet weak var PostButton: UIButton!
     
