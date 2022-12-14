@@ -12,6 +12,7 @@ class PostViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     @IBOutlet weak var batsuButton: UIImageView!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var subjectText: UITextField!
+    @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var hashtagText: UITextField!
     @IBOutlet weak var descriptionTextView: PlaceTextView!
     override func viewDidLoad() {
@@ -27,6 +28,8 @@ class PostViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         // Do any additional setup after loading the view.
     }
     //imageViewがタップされた時の動作
+    @IBAction func addPostButtonAction(_ sender: Any) {
+    }
     @objc func imageViewTapped(_ sender: UITapGestureRecognizer) {
         //画像フォルダが見えるようになる
         let picker = UIImagePickerController()
