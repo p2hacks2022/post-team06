@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 class ItiranViewController: UIViewController {
     @IBOutlet weak var TitleImage: UIImageView!
@@ -24,7 +25,6 @@ class ItiranViewController: UIViewController {
     
     override func viewDidLayoutSubviews(){
         super.viewDidLayoutSubviews()
-        
         //POSTDATAに入っているデータの確認用
         print("🟥全てのデータ\(POSTDATA)")
         
