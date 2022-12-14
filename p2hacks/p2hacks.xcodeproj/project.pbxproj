@@ -143,7 +143,6 @@
 		87D9706C2949EC99006814B0 /* JSON */ = {
 			isa = PBXGroup;
 			children = (
-				87D9706D2949ECAE006814B0 /* Data.json */,
 			);
 			path = JSON;
 			sourceTree = "<group>";
@@ -340,7 +339,6 @@
 				92BF08AD2944868100E37B14 /* LaunchScreen.storyboard in Resources */,
 				92FCA4D5294757E400297B5B /* CustomCellCollectionViewCell.xib in Resources */,
 				92BF08AA2944868100E37B14 /* Assets.xcassets in Resources */,
-				87D9706E2949ECAE006814B0 /* Data.json in Resources */,
 				8730B96E29474DA3006BB0C3 /* Detail.storyboard in Resources */,
 				92BF08A52944868000E37B14 /* Itiran.storyboard in Resources */,
 			);

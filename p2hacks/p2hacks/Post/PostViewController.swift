@@ -10,6 +10,7 @@ import RealmSwift
 
 let REALM = try! Realm()
 let POSTDATA = REALM.objects(Post.self)
+var IMAGEURL = NSURL(string: "")
 
 class PostViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     @IBOutlet weak var batsuButton: UIImageView!
@@ -32,15 +33,14 @@ class PostViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         //以下はREALMのデータベースに保存しているデータを削除するときのものだから必要に応じて使って！
         /*
          let result = REALM.objects(Post.self)
-        // ③ 部署を更新する
-        do{
-            try REALM.write{
-                REALM.delete(result)
-            }
-        }catch {
-            print("Error \(error)")
-        }
-         */
+         // ③ 部署を更新する
+         do{
+         try REALM.write{
+         REALM.delete(result)
+         }
+         }catch {
+         print("Error \(error)")
+         }*/
         // Do any additional setup after loading the view.
     }
     //imageViewがタップされた時の動作
@@ -63,9 +63,10 @@ class PostViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         post.sorena = 0
         post.name = subjectText.text!
         post.hashtag = ""
-        post.hashtagoptional = hashtagText.text!
+        post.hashtagOptional = hashtagText.text!
         post.date = dateFormatter.string(from: dt)
         post.descriptionString = descriptionTextView.text!
+        post.imageUrl = (IMAGEURL?.absoluteString)!
         try! REALM.write {
             REALM.add(post)
         }
@@ -90,6 +91,10 @@ class PostViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let selectedImage = info[.originalImage] as? UIImage {
             imageView.image = selectedImage
+        }
+        if info[UIImagePickerController.InfoKey.originalImage] != nil {
+            // 画像のパスを取得
+            IMAGEURL = info[UIImagePickerController.InfoKey.referenceURL] as? NSURL
         }
         self.dismiss(animated: true)
     }
