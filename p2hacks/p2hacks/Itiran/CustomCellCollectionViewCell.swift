@@ -15,13 +15,18 @@ class CustomCellCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var MainImage: UIImageView!
     @IBOutlet weak var SorenaImage: UIImageView!
     
-    func setupCell(model: Model){
-        NameLabel.text = model.name
-        TagLabel.text = model.tag_sub
-        self.backgroundColor = .white
     
-        
-    }
+    //func setupCell(model: Model){
+//    func configureCell(model: Model){
+//        self.NameLabel.text = model.name
+//        self.TagLabel.text = model.hashtag
+//        self.backgroundColor = .white
+//    }
+    func configureCell(model: Model){
+            self.NameLabel.text = model.Name
+            self.TagLabel.text = model.Tag
+            self.backgroundColor = .white
+        }
     
     override func awakeFromNib() {
         super.awakeFromNib()

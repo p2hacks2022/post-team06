@@ -7,48 +7,48 @@
 
 import Foundation
 
-struct Model:Codable{
-    let name_id: Int
-    let name: String
-    let tag_main: Int
-    let tag_sub: String
-    let date: Date
-    let explanation: String
+//struct Model:Codable{
+//    let id: Int
+//    let name: String
+//    let category: Int
+//    let hashtag: String
+//    let sorena: Int
+//    let date: Date
+//    let explanation: String
+//}
 
-}
-
-//struct Model {
-//    let Name: String
-//    let Tag: String?
+//extension Bundle {
+//    func decodeJSON<T: Codable>(_ file: String) -> T {
+//        guard let url = self.url(forResource: file, withExtension: nil) else {
+//            fatalError("Faild to locate \(file) in bundle.")
+//        }
 //
-//    static func createModels() -> [Model] {
-//        return [
-//            Model(Name: "AAAAAAAAAA", Tag: "aaaaaaaaaa"),
-//            Model(Name: "BBBBBBBBBB", Tag: "bbbbbbbbbb"),
-//            Model(Name: "CCCCCCCCCC", Tag: "cccccccccc"),
-//            Model(Name: "DDDDDDDDDD", Tag: "dddddddddd"),
-//            Model(Name: "EEEEEEEEEE", Tag: "eeeeeeeeee"),
-//            Model(Name: "FFFFFFFFFF", Tag: "ffffffffff"),
-//            Model(Name: "GGGGGGGGGG", Tag: "gggggggggg"),
-//            Model(Name: "HHHHHHHHHH", Tag: "hhhhhhhhhh"),
-//            Model(Name: "IIIIIIIIII", Tag: "iiiiiiiiii"),
-//            Model(Name: "JJJJJJJJJJ", Tag: "jjjjjjjjjj"),
-//            Model(Name: "KKKKKKKKKK", Tag: "kkkkkkkkkk"),
-//            Model(Name: "LLLLLLLLLL", Tag: "llllllllll"),
-//            Model(Name: "MMMMMMMMMM", Tag: "mmmmmmmmmm"),
-//            Model(Name: "NNNNNNNNNN", Tag: nil),
-//            Model(Name: "OOOOOOOOOO", Tag: nil),
-//            Model(Name: "PPPPPPPPPP", Tag: nil),
-//            Model(Name: "QQQQQQQQQQ", Tag: nil),
-//            Model(Name: "RRRRRRRRRR", Tag: nil),
-//            Model(Name: "SSSSSSSSSS", Tag: nil),
-//            Model(Name: "TTTTTTTTTT", Tag: nil),
-//            Model(Name: "UUUUUUUUUU", Tag: nil),
-//            Model(Name: "VVVVVVVVVV", Tag: nil),
-//            Model(Name: "WWWWWWWWWW", Tag: nil),
-//            Model(Name: "XXXXXXXXXX", Tag: nil),
-//            Model(Name: "YYYYYYYYYY", Tag: nil),
-//            Model(Name: "ZZZZZZZZZZ", Tag: nil),
-//        ]
+//        guard let data = try? Data(contentsOf: url) else {
+//            fatalError("Failed to load \(file) from bundle.")
+//        }
+//
+//        let decoder = JSONDecoder()
+//        guard let loaded = try? decoder.decode(T.self, from: data) else {
+//            fatalError("Failed to decode \(file) from bundle.")
+//        }
+//
+//        return loaded
 //    }
 //}
+//
+//let model: [Model] = Bundle.main.decodeJSON("Data.json")
+
+
+struct Model {
+    let Name: String
+    let Tag: String?
+
+    static func createModels() -> [Model] {
+        return [
+            Model(Name: "AAAAAAAAAA", Tag: "aaaaaaaaaa"),
+            Model(Name: "BBBBBBBBBB", Tag: "bbbbbbbbbb"),
+            Model(Name: "CCCCCCCCCC", Tag: "cccccccccc"),
+            Model(Name: "DDDDDDDDDD", Tag: "dddddddddd"),
+        ]
+    }
+}

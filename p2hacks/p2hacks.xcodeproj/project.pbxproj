@@ -14,6 +14,7 @@
 		8730B97029474DB4006BB0C3 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8730B96F29474DB4006BB0C3 /* DetailViewController.swift */; };
 		8730B97229474E08006BB0C3 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8730B97129474E08006BB0C3 /* PostViewController.swift */; };
 		87D9706B2949D298006814B0 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D9706A2949D298006814B0 /* Post.swift */; };
+		928B8FB8294A38B00044F374 /* Data.json in Resources */ = {isa = PBXBuildFile; fileRef = 928B8FB7294A38B00044F374 /* Data.json */; };
 		92BF089E2944868000E37B14 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BF089D2944868000E37B14 /* AppDelegate.swift */; };
 		92BF08A02944868000E37B14 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BF089F2944868000E37B14 /* SceneDelegate.swift */; };
 		92BF08A22944868000E37B14 /* ItiranViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BF08A12944868000E37B14 /* ItiranViewController.swift */; };
@@ -56,6 +57,7 @@
 		8730B96F29474DB4006BB0C3 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		8730B97129474E08006BB0C3 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		87D9706A2949D298006814B0 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		928B8FB7294A38B00044F374 /* Data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Data.json; path = ../../../../../../Downloads/Data.json; sourceTree = "<group>"; };
 		92BF089A2944868000E37B14 /* p2hacks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = p2hacks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92BF089D2944868000E37B14 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		92BF089F2944868000E37B14 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 		87D9706C2949EC99006814B0 /* JSON */ = {
 			isa = PBXGroup;
 			children = (
+				928B8FB7294A38B00044F374 /* Data.json */,
 			);
 			path = JSON;
 			sourceTree = "<group>";
@@ -339,6 +342,7 @@
 				92BF08AD2944868100E37B14 /* LaunchScreen.storyboard in Resources */,
 				92FCA4D5294757E400297B5B /* CustomCellCollectionViewCell.xib in Resources */,
 				92BF08AA2944868100E37B14 /* Assets.xcassets in Resources */,
+				928B8FB8294A38B00044F374 /* Data.json in Resources */,
 				8730B96E29474DA3006BB0C3 /* Detail.storyboard in Resources */,
 				92BF08A52944868000E37B14 /* Itiran.storyboard in Resources */,
 			);
