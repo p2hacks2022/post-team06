@@ -17,8 +17,6 @@ class PostViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     @IBOutlet weak var subjectText: UITextField!
     @IBOutlet weak var hashtagText: UITextField!
     @IBOutlet weak var descriptionTextView: PlaceTextView!
-    //postのidを足して管理するための変数
-    var postId:Int = 0
     override func viewDidLoad() {
         super.viewDidLoad()
         //imageViewにタップ判定をつけるためのもの
@@ -31,6 +29,18 @@ class PostViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         descriptionTextView.placeHolder = "説明を入力してください。"
         //POSTDATAに入っているデータの確認用
         print("🟥全てのデータ\(POSTDATA)")
+        //以下はREALMのデータベースに保存しているデータを削除するときのものだから必要に応じて使って！
+        /*
+         let result = REALM.objects(Post.self)
+        // ③ 部署を更新する
+        do{
+            try REALM.write{
+                REALM.delete(result)
+            }
+        }catch {
+            print("Error \(error)")
+        }
+         */
         // Do any additional setup after loading the view.
     }
     //imageViewがタップされた時の動作
@@ -49,7 +59,7 @@ class PostViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         let dateFormatter = DateFormatter()
         // DateFormatter を使用して書式とロケールを指定する
         dateFormatter.dateFormat = DateFormatter.dateFormat(fromTemplate: "yMMMdHms", options: 0, locale: Locale(identifier: "ja_JP"))
-        post.id = 0
+        post.id += 1
         post.sorena = 0
         post.name = subjectText.text!
         post.hashtag = ""
@@ -81,7 +91,7 @@ class PostViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     }
     //画面をタップしたらキーボードが閉じる
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-            view.endEditing(true)
+        view.endEditing(true)
     }
     /*
      // MARK: - Navigation
@@ -97,14 +107,14 @@ class PostViewController: UIViewController, UIImagePickerControllerDelegate, UIN
 
 //TextViewにplaceholderを入れるための拡張
 final class PlaceTextView: UITextView {
-
+    
     var placeHolder: String = "" {
         willSet {
             self.placeHolderLabel.text = newValue
             self.placeHolderLabel.sizeToFit()
         }
     }
-
+    
     private lazy var placeHolderLabel: UILabel = {
         let label = UILabel()
         label.lineBreakMode = .byWordWrapping
@@ -116,27 +126,27 @@ final class PlaceTextView: UITextView {
         self.addSubview(label)
         return label
     }()
-
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-
+        
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(textDidChanged),
                                                name: UITextView.textDidChangeNotification,
                                                object: nil)
-
+        
         NSLayoutConstraint.activate([
             placeHolderLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 7),
             placeHolderLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: 7),
             placeHolderLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 5),
             placeHolderLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 5)
         ])
-
+        
     }
-
+    
     @objc private func textDidChanged() {
         let shouldHidden = self.placeHolder.isEmpty || !self.text.isEmpty
         self.placeHolderLabel.alpha = shouldHidden ? 0 : 1
     }
-
+    
 }
