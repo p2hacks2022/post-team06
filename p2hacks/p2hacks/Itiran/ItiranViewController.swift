@@ -25,6 +25,8 @@ class ItiranViewController: UIViewController {
     override func viewDidLayoutSubviews(){
         super.viewDidLayoutSubviews()
         
+        //POSTDATAに入っているデータの確認用
+        print("🟥全てのデータ\(POSTDATA)")
         
         collectionview.dataSource = self
         

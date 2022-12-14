@@ -13,7 +13,7 @@
 		8730B96E29474DA3006BB0C3 /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8730B96D29474DA3006BB0C3 /* Detail.storyboard */; };
 		8730B97029474DB4006BB0C3 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8730B96F29474DB4006BB0C3 /* DetailViewController.swift */; };
 		8730B97229474E08006BB0C3 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8730B97129474E08006BB0C3 /* PostViewController.swift */; };
-		87D9706E2949ECAE006814B0 /* Data.json in Resources */ = {isa = PBXBuildFile; fileRef = 87D9706D2949ECAE006814B0 /* Data.json */; };
+		87D9706B2949D298006814B0 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D9706A2949D298006814B0 /* Post.swift */; };
 		92BF089E2944868000E37B14 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BF089D2944868000E37B14 /* AppDelegate.swift */; };
 		92BF08A02944868000E37B14 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BF089F2944868000E37B14 /* SceneDelegate.swift */; };
 		92BF08A22944868000E37B14 /* ItiranViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BF08A12944868000E37B14 /* ItiranViewController.swift */; };
@@ -55,7 +55,7 @@
 		8730B96D29474DA3006BB0C3 /* Detail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Detail.storyboard; sourceTree = "<group>"; };
 		8730B96F29474DB4006BB0C3 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		8730B97129474E08006BB0C3 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
-		87D9706D2949ECAE006814B0 /* Data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Data.json; sourceTree = "<group>"; };
+		87D9706A2949D298006814B0 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		92BF089A2944868000E37B14 /* p2hacks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = p2hacks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92BF089D2944868000E37B14 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		92BF089F2944868000E37B14 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -126,6 +126,7 @@
 			children = (
 				8730B96B29474D89006BB0C3 /* Post.storyboard */,
 				8730B97129474E08006BB0C3 /* PostViewController.swift */,
+				87D9706A2949D298006814B0 /* Post.swift */,
 			);
 			path = Post;
 			sourceTree = "<group>";
@@ -470,6 +471,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				92FCA4D72947612400297B5B /* DemoModel.swift in Sources */,
+				87D9706B2949D298006814B0 /* Post.swift in Sources */,
 				8730B97229474E08006BB0C3 /* PostViewController.swift in Sources */,
 				92BF08A82944868000E37B14 /* p2hacks.xcdatamodeld in Sources */,
 				92BF08A22944868000E37B14 /* ItiranViewController.swift in Sources */,
@@ -654,7 +656,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = BWL68L4987;
+				DEVELOPMENT_TEAM = S539G95T8G;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = p2hacks/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -684,7 +686,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = BWL68L4987;
+				DEVELOPMENT_TEAM = S539G95T8G;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = p2hacks/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
