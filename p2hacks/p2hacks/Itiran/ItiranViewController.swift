@@ -26,7 +26,7 @@ class ItiranViewController: UIViewController {
     
     override func viewDidLayoutSubviews(){
         super.viewDidLayoutSubviews()
-        
+    
         // Segue 準備
         func prepare(for segue: UIStoryboardSegue, sender: Any!) {
                 if (segue.identifier == "toDetail") {
@@ -34,8 +34,8 @@ class ItiranViewController: UIViewController {
                 }
             }
         
+        //collectionviewから何かの値を取得して遷移
         func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-             
             // [indexPath.row] から画像名を探し、UImage を設定
             selectedImage = UIImage(named: photos[indexPath.row])
             if selectedImage != nil {
