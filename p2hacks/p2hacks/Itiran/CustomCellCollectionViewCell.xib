@@ -24,13 +24,13 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="TAGgggggggggg" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ORp-Kb-Dyz">
-                        <rect key="frame" x="192" y="73" width="111" height="17"/>
+                        <rect key="frame" x="192" y="73" width="111" height="19"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SORENA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XVa-aU-Y65">
-                        <rect key="frame" x="222" y="98" width="56.333333333333314" height="17"/>
+                        <rect key="frame" x="222" y="101" width="56.333333333333314" height="17"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -50,8 +50,8 @@
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
-                <constraint firstItem="EGV-V4-fyb" firstAttribute="top" secondItem="ORp-Kb-Dyz" secondAttribute="bottom" constant="19" id="5xc-gs-mvW"/>
-                <constraint firstItem="XVa-aU-Y65" firstAttribute="top" secondItem="ORp-Kb-Dyz" secondAttribute="bottom" constant="19" id="7qs-8w-mJ2"/>
+                <constraint firstItem="EGV-V4-fyb" firstAttribute="top" secondItem="ORp-Kb-Dyz" secondAttribute="bottom" constant="12" id="5xc-gs-mvW"/>
+                <constraint firstItem="XVa-aU-Y65" firstAttribute="top" secondItem="ORp-Kb-Dyz" secondAttribute="bottom" constant="15" id="7qs-8w-mJ2"/>
                 <constraint firstItem="ORp-Kb-Dyz" firstAttribute="leading" secondItem="cvb-n7-9Ow" secondAttribute="trailing" constant="18" id="DHO-YG-hBU"/>
                 <constraint firstItem="EGV-V4-fyb" firstAttribute="leading" secondItem="cvb-n7-9Ow" secondAttribute="trailing" constant="23" id="HnE-s1-KZi"/>
                 <constraint firstItem="XVa-aU-Y65" firstAttribute="leading" secondItem="EGV-V4-fyb" secondAttribute="trailing" constant="6" id="LBH-gb-rLU"/>

@@ -9,11 +9,12 @@ import Foundation
 import RealmSwift
 
 class Post: Object {
-    @objc dynamic var id = 0
+    @objc dynamic var id = 1
     @objc dynamic var sorena = 0
     @objc dynamic var name = ""
     @objc dynamic var hashtag = ""
-    @objc dynamic var hashtagoptional = ""
+    @objc dynamic var hashtagOptional = ""
     @objc dynamic var date = ""
     @objc dynamic var descriptionString = ""
+    @objc dynamic var imageUrl = ""
 }
