@@ -10,6 +10,7 @@ import RealmSwift
 
 let REALM = try! Realm()
 let POSTDATA = REALM.objects(Post.self)
+var IMAGEURL = NSURL(string: "")
 
 class PostViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     @IBOutlet weak var batsuButton: UIImageView!
@@ -17,8 +18,6 @@ class PostViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     @IBOutlet weak var subjectText: UITextField!
     @IBOutlet weak var hashtagText: UITextField!
     @IBOutlet weak var descriptionTextView: PlaceTextView!
-    //postのidを足して管理するための変数
-    var postId:Int = 0
     override func viewDidLoad() {
         super.viewDidLoad()
         //imageViewにタップ判定をつけるためのもの
@@ -31,6 +30,17 @@ class PostViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         descriptionTextView.placeHolder = "説明を入力してください。"
         //POSTDATAに入っているデータの確認用
         print("🟥全てのデータ\(POSTDATA)")
+        //以下はREALMのデータベースに保存しているデータを削除するときのものだから必要に応じて使って！
+        /*
+         let result = REALM.objects(Post.self)
+         // ③ 部署を更新する
+         do{
+         try REALM.write{
+         REALM.delete(result)
+         }
+         }catch {
+         print("Error \(error)")
+         }*/
         // Do any additional setup after loading the view.
     }
     //imageViewがタップされた時の動作
@@ -53,9 +63,10 @@ class PostViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         post.sorena = 0
         post.name = subjectText.text!
         post.hashtag = ""
-        post.hashtagoptional = hashtagText.text!
+        post.hashtagOptional = hashtagText.text!
         post.date = dateFormatter.string(from: dt)
         post.descriptionString = descriptionTextView.text!
+        post.imageUrl = (IMAGEURL?.absoluteString)!
         try! REALM.write {
             REALM.add(post)
         }
@@ -63,6 +74,14 @@ class PostViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         subjectText.text = ""
         hashtagText.text = ""
         descriptionTextView.text = ""
+        // storyboardのインスタンス取得
+        let itiranStoryboard: UIStoryboard = UIStoryboard(name: "Itiran", bundle: nil)
+        // 遷移先ViewControllerのインスタンス取得
+        let ItiranView = itiranStoryboard.instantiateViewController(withIdentifier: "Itiran") as! ItiranViewController
+        // フルスクリーンにする
+        ItiranView.modalPresentationStyle = .fullScreen
+        // 画面遷移
+        self.present(ItiranView, animated: false, completion: nil)
     }
     //バツボタンがタップされた時の戻る動作
     @objc func batsuButtonTapped(_ sender: UITapGestureRecognizer) {
@@ -73,6 +92,10 @@ class PostViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         if let selectedImage = info[.originalImage] as? UIImage {
             imageView.image = selectedImage
         }
+        if info[UIImagePickerController.InfoKey.originalImage] != nil {
+            // 画像のパスを取得
+            IMAGEURL = info[UIImagePickerController.InfoKey.referenceURL] as? NSURL
+        }
         self.dismiss(animated: true)
     }
     //canselButtonを設定
@@ -81,7 +104,7 @@ class PostViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     }
     //画面をタップしたらキーボードが閉じる
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-            view.endEditing(true)
+        view.endEditing(true)
     }
     /*
      // MARK: - Navigation
@@ -97,14 +120,14 @@ class PostViewController: UIViewController, UIImagePickerControllerDelegate, UIN
 
 //TextViewにplaceholderを入れるための拡張
 final class PlaceTextView: UITextView {
-
+    
     var placeHolder: String = "" {
         willSet {
             self.placeHolderLabel.text = newValue
             self.placeHolderLabel.sizeToFit()
         }
     }
-
+    
     private lazy var placeHolderLabel: UILabel = {
         let label = UILabel()
         label.lineBreakMode = .byWordWrapping
@@ -116,27 +139,27 @@ final class PlaceTextView: UITextView {
         self.addSubview(label)
         return label
     }()
-
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-
+        
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(textDidChanged),
                                                name: UITextView.textDidChangeNotification,
                                                object: nil)
-
+        
         NSLayoutConstraint.activate([
             placeHolderLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 7),
             placeHolderLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: 7),
             placeHolderLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 5),
             placeHolderLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 5)
         ])
-
+        
     }
-
+    
     @objc private func textDidChanged() {
         let shouldHidden = self.placeHolder.isEmpty || !self.text.isEmpty
         self.placeHolderLabel.alpha = shouldHidden ? 0 : 1
     }
-
+    
 }
