@@ -64,11 +64,13 @@ class PostViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         post.hashtag = ""
         post.hashtagOptional = hashtagText.text!
         post.date = dateFormatter.string(from: dt)
-        post.descriptionString = descriptionTextView.text!
+        post.explanation = descriptionTextView.text!
         post.imageUrl = (IMAGEURL?.absoluteString)!
+        // post.idをどんどん足していく
         if POSTDATA.count != 0{
             post.id = POSTDATA.max(ofProperty: "id")! + 1
         }
+        // Realmに書き込み
         try! REALM.write {
             REALM.add(post)
         }

@@ -57,7 +57,11 @@
 		8730B96F29474DB4006BB0C3 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		8730B97129474E08006BB0C3 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		87D9706A2949D298006814B0 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+<<<<<<< HEAD
 		928B8FB7294A38B00044F374 /* Data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Data.json; path = ../../../../../../Downloads/Data.json; sourceTree = "<group>"; };
+=======
+		87D97073294B23F8006814B0 /* Data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Data.json; sourceTree = "<group>"; };
+>>>>>>> 399dfdd (途中)
 		92BF089A2944868000E37B14 /* p2hacks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = p2hacks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92BF089D2944868000E37B14 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		92BF089F2944868000E37B14 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -145,7 +149,11 @@
 		87D9706C2949EC99006814B0 /* JSON */ = {
 			isa = PBXGroup;
 			children = (
+<<<<<<< HEAD
 				928B8FB7294A38B00044F374 /* Data.json */,
+=======
+				87D97073294B23F8006814B0 /* Data.json */,
+>>>>>>> 399dfdd (途中)
 			);
 			path = JSON;
 			sourceTree = "<group>";
@@ -342,7 +350,11 @@
 				92BF08AD2944868100E37B14 /* LaunchScreen.storyboard in Resources */,
 				92FCA4D5294757E400297B5B /* CustomCellCollectionViewCell.xib in Resources */,
 				92BF08AA2944868100E37B14 /* Assets.xcassets in Resources */,
+<<<<<<< HEAD
 				928B8FB8294A38B00044F374 /* Data.json in Resources */,
+=======
+				87D97074294B23F8006814B0 /* Data.json in Resources */,
+>>>>>>> 399dfdd (途中)
 				8730B96E29474DA3006BB0C3 /* Detail.storyboard in Resources */,
 				92BF08A52944868000E37B14 /* Itiran.storyboard in Resources */,
 			);
