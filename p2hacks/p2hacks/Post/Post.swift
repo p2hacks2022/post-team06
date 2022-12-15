@@ -17,4 +17,8 @@ class Post: Object {
     @objc dynamic var date = ""
     @objc dynamic var descriptionString = ""
     @objc dynamic var imageUrl = ""
+    // プライマリキーの定義
+    override public static func primaryKey() -> String? {
+        return "id"
+    }
 }
