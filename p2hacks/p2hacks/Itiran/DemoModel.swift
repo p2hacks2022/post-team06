@@ -7,15 +7,15 @@
 
 import Foundation
 
-//struct Model:Codable{
-//    let id: Int
-//    let name: String
-//    let category: Int
-//    let hashtag: String
-//    let sorena: Int
-//    let date: Date
-//    let explanation: String
-//}
+struct Model:Codable{
+    let id: Int
+    let name: String
+    let category: Int
+    let hashtag: String
+    let sorena: Int
+    let date: Date
+    let explanation: String
+}
 
 //extension Bundle {
 //    func decodeJSON<T: Codable>(_ file: String) -> T {
@@ -39,16 +39,16 @@ import Foundation
 //let model: [Model] = Bundle.main.decodeJSON("Data.json")
 
 
-struct Model {
-    let Name: String
-    let Tag: String?
-
-    static func createModels() -> [Model] {
-        return [
-            Model(Name: "AAAAAAAAAA", Tag: "aaaaaaaaaa"),
-            Model(Name: "BBBBBBBBBB", Tag: "bbbbbbbbbb"),
-            Model(Name: "CCCCCCCCCC", Tag: "cccccccccc"),
-            Model(Name: "DDDDDDDDDD", Tag: "dddddddddd"),
-        ]
-    }
-}
+//struct Model {
+//    let Name: String
+//    let Tag: String?
+//
+//    static func createModels() -> [Model] {
+//        return [
+//            Model(Name: "AAAAAAAAAA", Tag: "aaaaaaaaaa"),
+//            Model(Name: "BBBBBBBBBB", Tag: "bbbbbbbbbb"),
+//            Model(Name: "CCCCCCCCCC", Tag: "cccccccccc"),
+//            Model(Name: "DDDDDDDDDD", Tag: "dddddddddd"),
+//        ]
+//    }
+//}
