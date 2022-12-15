@@ -27,7 +27,7 @@ class PostViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         batsuButton.isUserInteractionEnabled = true
         batsuButton.addGestureRecognizer(UITapGestureRecognizer(target: self, action:#selector(batsuButtonTapped(_:))))
         //textViewにplaceHolderを設定
-        descriptionTextView.placeHolder = "説明を入力してください。"
+        descriptionTextView.placeHolder = "　　　説明を入力してください。"
         //POSTDATAに入っているデータの確認用
         print("🟥全てのデータ\(POSTDATA)")
         //以下はREALMのデータベースに保存しているデータを削除するときのものだから必要に応じて使って！
@@ -137,7 +137,7 @@ final class PlaceTextView: UITextView {
         label.lineBreakMode = .byWordWrapping
         label.numberOfLines = 0
         label.font = self.font
-        label.textColor = .gray
+        label.textColor = .lightGray
         label.backgroundColor = .clear
         label.translatesAutoresizingMaskIntoConstraints = false
         self.addSubview(label)
