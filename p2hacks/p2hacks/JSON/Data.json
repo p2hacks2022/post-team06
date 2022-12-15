@@ -1,452 +1,452 @@
 [
   {
-    "ID": "1",
-    "Name": "平成フラミンゴ",
-    "Category": "1",
-    "Hashtag": "YouTuber",
+    "id": "1",
+    "name": "平成フラミンゴ",
+    "hashtag": "1",
+    "hashtagOptional": "YouTuber",
     "Sorena": "529",
-    "Date": "2.02212E+13",
-    "Explanation": "女性2人組のYouTuber"
+    "date": "2.02212E+13",
+    "explanation": "女性2人組のYouTuber"
   },
   {
-    "ID": "2",
-    "Name": "IVE",
-    "Category": "1",
-    "Hashtag": "韓国",
+    "id": "2",
+    "name": "IVE",
+    "hashtag": "1",
+    "hashtagOptional": "韓国",
     "Sorena": "112",
-    "Date": "2.02212E+13",
-    "Explanation": "韓国の6人組女性アイドルグループ"
+    "date": "2.02212E+13",
+    "explanation": "韓国の6人組女性アイドルグループ"
   },
   {
-    "ID": "3",
-    "Name": "なにわ男子",
-    "Category": "1",
-    "Hashtag": "ジャニーズ",
+    "id": "3",
+    "name": "なにわ男子",
+    "hashtag": "1",
+    "hashtagOptional": "ジャニーズ",
     "Sorena": "331",
-    "Date": "2.02212E+13",
-    "Explanation": "日本の7人組男性アイドルグループ"
+    "date": "2.02212E+13",
+    "explanation": "日本の7人組男性アイドルグループ"
   },
   {
-    "ID": "4",
-    "Name": "Saucy Dog",
-    "Category": "1",
-    "Hashtag": "",
+    "id": "4",
+    "name": "Saucy Dog",
+    "hashtag": "1",
+    "hashtagOptional": "",
     "Sorena": "752",
-    "Date": "2.02212E+13",
-    "Explanation": "日本のスリーピースロックバンド"
+    "date": "2.02212E+13",
+    "explanation": "日本のスリーピースロックバンド"
   },
   {
-    "ID": "5",
-    "Name": "コムドット",
-    "Category": "1",
-    "Hashtag": "YouTuber",
+    "id": "5",
+    "name": "コムドット",
+    "hashtag": "1",
+    "hashtagOptional": "YouTuber",
     "Sorena": "711",
-    "Date": "2.02212E+13",
-    "Explanation": "日本の東京都に拠点を置く、5人組のYouTuber"
+    "date": "2.02212E+13",
+    "explanation": "日本の東京都に拠点を置く、5人組のYouTuber"
   },
   {
-    "ID": "6",
-    "Name": "なえなの",
-    "Category": "1",
-    "Hashtag": "",
+    "id": "6",
+    "name": "なえなの",
+    "hashtag": "1",
+    "hashtagOptional": "",
     "Sorena": "815",
-    "Date": "2.02212E+13",
-    "Explanation": "日本の女性インフルエンサー"
+    "date": "2.02212E+13",
+    "explanation": "日本の女性インフルエンサー"
   },
   {
-    "ID": "7",
-    "Name": "aespa",
-    "Category": "1",
-    "Hashtag": "韓国",
+    "id": "7",
+    "name": "aespa",
+    "hashtag": "1",
+    "hashtagOptional": "韓国",
     "Sorena": "339",
-    "Date": "2.02212E+13",
-    "Explanation": "韓国の4人組多国籍女性アイドルグループ"
+    "date": "2.02212E+13",
+    "explanation": "韓国の4人組多国籍女性アイドルグループ"
   },
   {
-    "ID": "8",
-    "Name": "高橋史哉",
-    "Category": "1",
-    "Hashtag": "",
+    "id": "8",
+    "name": "高橋史哉",
+    "hashtag": "1",
+    "hashtagOptional": "",
     "Sorena": "651",
-    "Date": "2.02212E+13",
-    "Explanation": "日本の俳優"
+    "date": "2.02212E+13",
+    "explanation": "日本の俳優"
   },
   {
-    "ID": "9",
-    "Name": "浅見めい",
-    "Category": "1",
-    "Hashtag": "YouTuber",
+    "id": "9",
+    "name": "浅見めい",
+    "hashtag": "1",
+    "hashtagOptional": "YouTuber",
     "Sorena": "556",
-    "Date": "2.02212E+13",
-    "Explanation": "日本の女性YouTuberで「くれいじーまねっと」のメンバーの一人"
+    "date": "2.02212E+13",
+    "explanation": "日本の女性YouTuberで「くれいじーまねっと」のメンバーの一人"
   },
   {
-    "ID": "10",
-    "Name": "Ado",
-    "Category": "1",
-    "Hashtag": "",
+    "id": "10",
+    "name": "Ado",
+    "hashtag": "1",
+    "hashtagOptional": "",
     "Sorena": "217",
-    "Date": "2.02212E+13",
-    "Explanation": "日本の歌手"
+    "date": "2.02212E+13",
+    "explanation": "日本の歌手"
   },
   {
-    "ID": "11",
-    "Name": "放課後カラオケ",
-    "Category": "2",
-    "Hashtag": "青春",
+    "id": "11",
+    "name": "放課後カラオケ",
+    "hashtag": "2",
+    "hashtagOptional": "青春",
     "Sorena": "197",
-    "Date": "2.02212E+13",
-    "Explanation": "放課後に友達などとカラオケに行くこと"
+    "date": "2.02212E+13",
+    "explanation": "放課後に友達などとカラオケに行くこと"
   },
   {
-    "ID": "12",
-    "Name": "チグハグダンス",
-    "Category": "2",
-    "Hashtag": "TikTok",
+    "id": "12",
+    "name": "チグハグダンス",
+    "hashtag": "2",
+    "hashtagOptional": "TikTok",
     "Sorena": "632",
-    "Date": "2.02212E+12",
-    "Explanation": "THE SUPER FRUITのデビューシングル「チグハグ」の楽曲に合わせて踊るダンスのこと"
+    "date": "2.02212E+12",
+    "explanation": "THE SUPER FRUITのデビューシングル「チグハグ」の楽曲に合わせて踊るダンスのこと"
   },
   {
-    "ID": "13",
-    "Name": "ios16のロック画面カスタマイズ",
-    "Category": "2",
-    "Hashtag": "iPhone",
+    "id": "13",
+    "name": "ios16のロック画面カスタマイズ",
+    "hashtag": "2",
+    "hashtagOptional": "iPhone",
     "Sorena": "492",
-    "Date": "2.02212E+11",
-    "Explanation": "2022年9月13日にリリースされた最新バージョン「iOS 16」でロック画面がカスタマイズできるようになった"
+    "date": "2.02212E+11",
+    "explanation": "2022年9月13日にリリースされた最新バージョン「iOS 16」でロック画面がカスタマイズできるようになった"
   },
   {
-    "ID": "14",
-    "Name": "サウナ",
-    "Category": "2",
-    "Hashtag": "",
+    "id": "14",
+    "name": "サウナ",
+    "hashtag": "2",
+    "hashtagOptional": "",
     "Sorena": "203",
-    "Date": "2.02212E+14",
-    "Explanation": "「サ道」というドラマが再放送されたことで、若者の間でサウナが人気となった"
+    "date": "2.02212E+14",
+    "explanation": "「サ道」というドラマが再放送されたことで、若者の間でサウナが人気となった"
   },
   {
-    "ID": "15",
-    "Name": "ひろゆきメーカー",
-    "Category": "2",
-    "Hashtag": "",
+    "id": "15",
+    "name": "ひろゆきメーカー",
+    "hashtag": "2",
+    "hashtagOptional": "",
     "Sorena": "844",
-    "Date": "2.02212E+13",
-    "Explanation": "専用ウェブサイトから、好きな文章等を入力することで、ひろゆき氏が話しているような動画コンテンツを手軽に作成できるジェネレーターサービス"
+    "date": "2.02212E+13",
+    "explanation": "専用ウェブサイトから、好きな文章等を入力することで、ひろゆき氏が話しているような動画コンテンツを手軽に作成できるジェネレーターサービス"
   },
   {
-    "ID": "16",
-    "Name": "推し活",
-    "Category": "2",
-    "Hashtag": "",
+    "id": "16",
+    "name": "推し活",
+    "hashtag": "2",
+    "hashtagOptional": "",
     "Sorena": "306",
-    "Date": "2.02212E+14",
-    "Explanation": "アイドルやキャラクターなどの「推し」、いわゆるご贔屓を愛でたり応援したりする「推しを様々な形で応援する活動」のこと"
+    "date": "2.02212E+14",
+    "explanation": "アイドルやキャラクターなどの「推し」、いわゆるご贔屓を愛でたり応援したりする「推しを様々な形で応援する活動」のこと"
   },
   {
-    "ID": "17",
-    "Name": "AIフィルタ",
-    "Category": "2",
-    "Hashtag": "TikTok",
+    "id": "17",
+    "name": "AIフィルタ",
+    "hashtag": "2",
+    "hashtagOptional": "TikTok",
     "Sorena": "923",
-    "Date": "2.02212E+13",
-    "Explanation": "TikTokの機能で、使うと漫画で描いたような画像になる"
+    "date": "2.02212E+13",
+    "explanation": "TikTokの機能で、使うと漫画で描いたような画像になる"
   },
   {
-    "ID": "18",
-    "Name": "スプラトゥーン3",
-    "Category": "2",
-    "Hashtag": "Swich",
+    "id": "18",
+    "name": "スプラトゥーン3",
+    "hashtag": "2",
+    "hashtagOptional": "Swich",
     "Sorena": "471",
-    "Date": "2.02212E+13",
-    "Explanation": "Nintendo Swich用の2022年9月9日に発売されたゲーム"
+    "date": "2.02212E+13",
+    "explanation": "Nintendo Swich用の2022年9月9日に発売されたゲーム"
   },
   {
-    "ID": "19",
-    "Name": "肩掛けスマホケース",
-    "Category": "2",
-    "Hashtag": "",
+    "id": "19",
+    "name": "肩掛けスマホケース",
+    "hashtag": "2",
+    "hashtagOptional": "",
     "Sorena": "617",
-    "Date": "2.02212E+13",
-    "Explanation": "ショルダータイプのスマホケース"
+    "date": "2.02212E+13",
+    "explanation": "ショルダータイプのスマホケース"
   },
   {
-    "ID": "20",
-    "Name": "アームウォーム",
-    "Category": "2",
-    "Hashtag": "おしゃれ",
+    "id": "20",
+    "name": "アームウォーム",
+    "hashtag": "2",
+    "hashtagOptional": "おしゃれ",
     "Sorena": "929",
-    "Date": "2.02212E+13",
-    "Explanation": "肘下あたりの腕から手までを覆う筒状のもの。韓国アイドルが積極的に取り入れたことから、若い世代を中心にブームが起きた"
+    "date": "2.02212E+13",
+    "explanation": "肘下あたりの腕から手までを覆う筒状のもの。韓国アイドルが積極的に取り入れたことから、若い世代を中心にブームが起きた"
   },
   {
-    "ID": "21",
-    "Name": "カヌレ",
-    "Category": "5",
-    "Hashtag": "スイーツ",
+    "id": "21",
+    "name": "カヌレ",
+    "hashtag": "5",
+    "hashtagOptional": "スイーツ",
     "Sorena": "935",
-    "Date": "2.02211E+11",
-    "Explanation": "フランスのボルドー地方の修道院で作られた伝統的な焼き菓子"
+    "date": "2.02211E+11",
+    "explanation": "フランスのボルドー地方の修道院で作られた伝統的な焼き菓子"
   },
   {
-    "ID": "22",
-    "Name": "焼き芋ブリュレフラペチーノ",
-    "Category": "5",
-    "Hashtag": "スタバ",
+    "id": "22",
+    "name": "焼き芋ブリュレフラペチーノ",
+    "hashtag": "5",
+    "hashtagOptional": "スタバ",
     "Sorena": "184",
-    "Date": "2.02211E+13",
-    "Explanation": "スターバックスが9月21日に発売したフラペチーノで、さつまいもをスターバックス流にアレンジしたドリンクのこと"
+    "date": "2.02211E+13",
+    "explanation": "スターバックスが9月21日に発売したフラペチーノで、さつまいもをスターバックス流にアレンジしたドリンクのこと"
   },
   {
-    "ID": "23",
-    "Name": "韓国ワッフル",
-    "Category": "5",
-    "Hashtag": "スイーツ",
+    "id": "23",
+    "name": "韓国ワッフル",
+    "hashtag": "5",
+    "hashtagOptional": "スイーツ",
     "Sorena": "824",
-    "Date": "2.02211E+13",
-    "Explanation": "韓国のワッフルで見た目が可愛らしいのが特徴"
+    "date": "2.02211E+13",
+    "explanation": "韓国のワッフルで見た目が可愛らしいのが特徴"
   },
   {
-    "ID": "24",
-    "Name": "ヤクルト1000",
-    "Category": "5",
-    "Hashtag": "",
+    "id": "24",
+    "name": "ヤクルト1000",
+    "hashtag": "5",
+    "hashtagOptional": "",
     "Sorena": "441",
-    "Date": "2.02211E+13",
-    "Explanation": "生きて腸内まで到達する「乳酸菌 シロタ株」がヤクルト史上最高密度の１本（100ml）に1000億個入った、乳製品乳酸菌飲料"
+    "date": "2.02211E+13",
+    "explanation": "生きて腸内まで到達する「乳酸菌 シロタ株」がヤクルト史上最高密度の１本（100ml）に1000億個入った、乳製品乳酸菌飲料"
   },
   {
-    "ID": "25",
-    "Name": "JKケーキ",
-    "Category": "5",
-    "Hashtag": "おしゃれ",
+    "id": "25",
+    "name": "JKケーキ",
+    "hashtag": "5",
+    "hashtagOptional": "おしゃれ",
     "Sorena": "231",
-    "Date": "2.02211E+13",
-    "Explanation": "女子高生の中で人気の、お菓子やキャンドルなど様々な小物でケーキを飾り、JK風なケーキを作ること"
+    "date": "2.02211E+13",
+    "explanation": "女子高生の中で人気の、お菓子やキャンドルなど様々な小物でケーキを飾り、JK風なケーキを作ること"
   },
   {
-    "ID": "26",
-    "Name": "地球グミ",
-    "Category": "5",
-    "Hashtag": "",
+    "id": "26",
+    "name": "地球グミ",
+    "hashtag": "5",
+    "hashtagOptional": "",
     "Sorena": "155",
-    "Date": "2.02212E+13",
-    "Explanation": "地球の見た目をしたグミ"
+    "date": "2.02212E+13",
+    "explanation": "地球の見た目をしたグミ"
   },
   {
-    "ID": "27",
-    "Name": "トゥンカロン",
-    "Category": "5",
-    "Hashtag": "スイーツ",
+    "id": "27",
+    "name": "トゥンカロン",
+    "hashtag": "5",
+    "hashtagOptional": "スイーツ",
     "Sorena": "305",
-    "Date": "2.02212E+13",
-    "Explanation": "韓国のマカロンで見た目がとても可愛らしい"
+    "date": "2.02212E+13",
+    "explanation": "韓国のマカロンで見た目がとても可愛らしい"
   },
   {
-    "ID": "28",
-    "Name": "セルインケーキ",
-    "Category": "5",
-    "Hashtag": "スイーツ",
+    "id": "28",
+    "name": "セルインケーキ",
+    "hashtag": "5",
+    "hashtagOptional": "スイーツ",
     "Sorena": "364",
-    "Date": "2.02212E+13",
-    "Explanation": "バースデーケーキ・誕生日ケーキ"
+    "date": "2.02212E+13",
+    "explanation": "バースデーケーキ・誕生日ケーキ"
   },
   {
-    "ID": "29",
-    "Name": "わらび餅ドリンク",
-    "Category": "5",
-    "Hashtag": "スイーツ",
+    "id": "29",
+    "name": "わらび餅ドリンク",
+    "hashtag": "5",
+    "hashtagOptional": "スイーツ",
     "Sorena": "517",
-    "Date": "2.02211E+13",
-    "Explanation": "ストローで飲めるわらび餅とドリンクが入った飲み物"
+    "date": "2.02211E+13",
+    "explanation": "ストローで飲めるわらび餅とドリンクが入った飲み物"
   },
   {
-    "ID": "30",
-    "Name": "マリトッツォ",
-    "Category": "5",
-    "Hashtag": "スイーツ",
+    "id": "30",
+    "name": "マリトッツォ",
+    "hashtag": "5",
+    "hashtagOptional": "スイーツ",
     "Sorena": "375",
-    "Date": "2.02211E+13",
-    "Explanation": "イタリア発祥のパンに大量のクリームを挟んだ伝統的なお菓子"
+    "date": "2.02211E+13",
+    "explanation": "イタリア発祥のパンに大量のクリームを挟んだ伝統的なお菓子"
   },
   {
-    "ID": "31",
-    "Name": "チグハグダンス",
-    "Category": "4",
-    "Hashtag": "TikTok",
+    "id": "31",
+    "name": "チグハグダンス",
+    "hashtag": "4",
+    "hashtagOptional": "TikTok",
     "Sorena": "626",
-    "Date": "2.02211E+13",
-    "Explanation": "THE SUPER FRUITの曲"
+    "date": "2.02211E+13",
+    "explanation": "THE SUPER FRUITの曲"
   },
   {
-    "ID": "32",
-    "Name": "知らんけど",
-    "Category": "4",
-    "Hashtag": "方言",
+    "id": "32",
+    "name": "知らんけど",
+    "hashtag": "4",
+    "hashtagOptional": "方言",
     "Sorena": "738",
-    "Date": "2.02211E+13",
-    "Explanation": "関西弁あるいは特に大阪弁の中で、「自分の見解に責任は持てない」旨を言い添える意味合いで用いられる言い回し"
+    "date": "2.02211E+13",
+    "explanation": "関西弁あるいは特に大阪弁の中で、「自分の見解に責任は持てない」旨を言い添える意味合いで用いられる言い回し"
   },
   {
-    "ID": "33",
-    "Name": "シャバい",
-    "Category": "4",
-    "Hashtag": "",
+    "id": "33",
+    "name": "シャバい",
+    "hashtag": "4",
+    "hashtagOptional": "",
     "Sorena": "170",
-    "Date": "2.02211E+13",
-    "Explanation": "ひ弱、根性なし、冴えない、といった様子を表現する俗な言い方"
+    "date": "2.02211E+13",
+    "explanation": "ひ弱、根性なし、冴えない、といった様子を表現する俗な言い方"
   },
   {
-    "ID": "34",
-    "Name": "それな",
-    "Category": "4",
-    "Hashtag": "",
+    "id": "34",
+    "name": "それな",
+    "hashtag": "4",
+    "hashtagOptional": "",
     "Sorena": "667",
-    "Date": "2.02211E+13",
-    "Explanation": "SNSや会話で相手の発言や意見に対して、「まさに！」と相づちを打つときに使われる若者言葉"
+    "date": "2.02211E+13",
+    "explanation": "SNSや会話で相手の発言や意見に対して、「まさに！」と相づちを打つときに使われる若者言葉"
   },
   {
-    "ID": "35",
-    "Name": "まぎか",
-    "Category": "4",
-    "Hashtag": "",
+    "id": "35",
+    "name": "まぎか",
+    "hashtag": "4",
+    "hashtagOptional": "",
     "Sorena": "696",
-    "Date": "2.02211E+13",
-    "Explanation": "”平成フラミンゴ”の2人が発した本当や真剣という意味の”まじか”が変化した流行語"
+    "date": "2.02211E+13",
+    "explanation": "”平成フラミンゴ”の2人が発した本当や真剣という意味の”まじか”が変化した流行語"
   },
   {
-    "ID": "36",
-    "Name": "限界オタク",
-    "Category": "4",
-    "Hashtag": "",
+    "id": "36",
+    "name": "限界オタク",
+    "hashtag": "4",
+    "hashtagOptional": "",
     "Sorena": "357",
-    "Date": "2.02211E+13",
-    "Explanation": "行動や言動の気持ち悪さや痛々しさが許容量の限界を超えたオタクを指す言葉"
+    "date": "2.02211E+13",
+    "explanation": "行動や言動の気持ち悪さや痛々しさが許容量の限界を超えたオタクを指す言葉"
   },
   {
-    "ID": "37",
-    "Name": "美味しいヤミー感謝感謝",
-    "Category": "4",
-    "Hashtag": "スカイピース",
+    "id": "37",
+    "name": "美味しいヤミー感謝感謝",
+    "hashtag": "4",
+    "hashtagOptional": "スカイピース",
     "Sorena": "871",
-    "Date": "2.02211E+13",
-    "Explanation": "YouTuberのスカイピース・きりたんぽ・加藤乃愛が考案したリズムゲームで、美味しい食べ物を食べた時に使う言葉のこと"
+    "date": "2.02211E+13",
+    "explanation": "YouTuberのスカイピース・きりたんぽ・加藤乃愛が考案したリズムゲームで、美味しい食べ物を食べた時に使う言葉のこと"
   },
   {
-    "ID": "38",
-    "Name": "えぐいてー",
-    "Category": "4",
-    "Hashtag": "",
+    "id": "38",
+    "name": "えぐいてー",
+    "hashtag": "4",
+    "hashtagOptional": "",
     "Sorena": "760",
-    "Date": "2.02211E+13",
-    "Explanation": "YouTuberチャンネルがーどまんが、ドッキリを仕掛けられた時に言った言葉で、えぐい(＝きつい、つらい、厳しい)とほぼ同意味の言葉"
+    "date": "2.02211E+13",
+    "explanation": "YouTuberチャンネルがーどまんが、ドッキリを仕掛けられた時に言った言葉で、えぐい(＝きつい、つらい、厳しい)とほぼ同意味の言葉"
   },
   {
-    "ID": "39",
-    "Name": "おぢさん構文",
-    "Category": "4",
-    "Hashtag": "",
+    "id": "39",
+    "name": "おぢさん構文",
+    "hashtag": "4",
+    "hashtagOptional": "",
     "Sorena": "100",
-    "Date": "2.02211E+13",
-    "Explanation": "“おじさんがLINEで使っていそう”、あるいは“うちの上司がいつも使っている”と、話題になっているおじさん独特の言い回し"
+    "date": "2.02211E+13",
+    "explanation": "“おじさんがLINEで使っていそう”、あるいは“うちの上司がいつも使っている”と、話題になっているおじさん独特の言い回し"
   },
   {
-    "ID": "40",
-    "Name": "しんどw",
-    "Category": "4",
-    "Hashtag": "",
+    "id": "40",
+    "name": "しんどw",
+    "hashtag": "4",
+    "hashtagOptional": "",
     "Sorena": "118",
-    "Date": "2.02211E+13",
-    "Explanation": "骨が折れる、つらい、苦しいという意味の主に関西で使われる言葉である「しんどい」の略"
+    "date": "2.02211E+13",
+    "explanation": "骨が折れる、つらい、苦しいという意味の主に関西で使われる言葉である「しんどい」の略"
   },
   {
-    "ID": "41",
-    "Name": "新時代",
-    "Category": "3",
-    "Hashtag": "ワンピース",
+    "id": "41",
+    "name": "新時代",
+    "hashtag": "3",
+    "hashtagOptional": "ワンピース",
     "Sorena": "120",
-    "Date": "2.02211E+13",
-    "Explanation": "「Ado」の楽曲の一つで、ワンピースの映画の主題歌"
+    "date": "2.02211E+13",
+    "explanation": "「Ado」の楽曲の一つで、ワンピースの映画の主題歌"
   },
   {
-    "ID": "42",
-    "Name": "After LIKE",
-    "Category": "3",
-    "Hashtag": "",
+    "id": "42",
+    "name": "After LIKE",
+    "hashtag": "3",
+    "hashtagOptional": "",
     "Sorena": "395",
-    "Date": "2.02211E+13",
-    "Explanation": "「IVE」の楽曲の一つ"
+    "date": "2.02211E+13",
+    "explanation": "「IVE」の楽曲の一つ"
   },
   {
-    "ID": "43",
-    "Name": "Overdose",
-    "Category": "3",
-    "Hashtag": "",
+    "id": "43",
+    "name": "Overdose",
+    "hashtag": "3",
+    "hashtagOptional": "",
     "Sorena": "991",
-    "Date": "2.02211E+13",
-    "Explanation": "シンガーソングライター「なとり」の楽曲の一つ"
+    "date": "2.02211E+13",
+    "explanation": "シンガーソングライター「なとり」の楽曲の一つ"
   },
   {
-    "ID": "44",
-    "Name": "Patner",
-    "Category": "3",
-    "Hashtag": "TikTok",
+    "id": "44",
+    "name": "Patner",
+    "hashtag": "3",
+    "hashtagOptional": "TikTok",
     "Sorena": "344",
-    "Date": "2.02211E+13",
-    "Explanation": "シンガーソングライター「有華」の楽曲の一つ"
+    "date": "2.02211E+13",
+    "explanation": "シンガーソングライター「有華」の楽曲の一つ"
   },
   {
-    "ID": "45",
-    "Name": "W/X/Y",
-    "Category": "3",
-    "Hashtag": "",
+    "id": "45",
+    "name": "W/X/Y",
+    "hashtag": "3",
+    "hashtagOptional": "",
     "Sorena": "856",
-    "Date": "2.02211E+13",
-    "Explanation": "シンガーソングライター「Tani Yuuki」の楽曲の一つ"
+    "date": "2.02211E+13",
+    "explanation": "シンガーソングライター「Tani Yuuki」の楽曲の一つ"
   },
   {
-    "ID": "46",
-    "Name": "エジソン",
-    "Category": "3",
-    "Hashtag": "",
+    "id": "46",
+    "name": "エジソン",
+    "hashtag": "3",
+    "hashtagOptional": "",
     "Sorena": "739",
-    "Date": "2.02212E+13",
-    "Explanation": "日本の音楽ユニット「水曜日のカンパネラ」の楽曲の一つ"
+    "date": "2.02212E+13",
+    "explanation": "日本の音楽ユニット「水曜日のカンパネラ」の楽曲の一つ"
   },
   {
-    "ID": "47",
-    "Name": "チグハグダンス",
-    "Category": "3",
-    "Hashtag": "TikTok",
+    "id": "47",
+    "name": "チグハグダンス",
+    "hashtag": "3",
+    "hashtagOptional": "TikTok",
     "Sorena": "395",
-    "Date": "2.02212E+13",
-    "Explanation": "THE SUPER FRUITのデビューシングルで、TikTokで流行っている"
+    "date": "2.02212E+13",
+    "explanation": "THE SUPER FRUITのデビューシングルで、TikTokで流行っている"
   },
   {
-    "ID": "48",
-    "Name": "Habit",
-    "Category": "3",
-    "Hashtag": "",
+    "id": "48",
+    "name": "Habit",
+    "hashtag": "3",
+    "hashtagOptional": "",
     "Sorena": "331",
-    "Date": "2.02212E+13",
-    "Explanation": "日本のバンド「SEKAI NO OWARI」のメジャー16作目のシングル曲"
+    "date": "2.02212E+13",
+    "explanation": "日本のバンド「SEKAI NO OWARI」のメジャー16作目のシングル曲"
   },
   {
-    "ID": "49",
-    "Name": "ちゅきちゅきハリケーン",
-    "Category": "3",
-    "Hashtag": "ジャニーズ",
+    "id": "49",
+    "name": "ちゅきちゅきハリケーン",
+    "hashtag": "3",
+    "hashtagOptional": "ジャニーズ",
     "Sorena": "193",
-    "Date": "2.02212E+13",
-    "Explanation": "日本の男性アイドルグループ「なにわ男子」の楽曲の一つ"
+    "date": "2.02212E+13",
+    "explanation": "日本の男性アイドルグループ「なにわ男子」の楽曲の一つ"
   },
   {
-    "ID": "50",
-    "Name": "PAKU",
-    "Category": "3",
-    "Hashtag": "TikTok",
+    "id": "50",
+    "name": "PAKU",
+    "hashtag": "3",
+    "hashtagOptional": "TikTok",
     "Sorena": "124",
-    "Date": "2.02212E+13",
-    "Explanation": "シンガーソンングライター「asmi」の楽曲の一つ"
+    "date": "2.02212E+13",
+    "explanation": "シンガーソンングライター「asmi」の楽曲の一つ"
   }
 ]
