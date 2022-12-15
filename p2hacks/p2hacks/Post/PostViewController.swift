@@ -18,7 +18,6 @@ class PostViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     @IBOutlet weak var subjectText: UITextField!
     @IBOutlet weak var hashtagText: UITextField!
     @IBOutlet weak var descriptionTextView: PlaceTextView!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         //imageViewにタップ判定をつけるためのもの
@@ -60,107 +59,109 @@ class PostViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         let dateFormatter = DateFormatter()
         // DateFormatter を使用して書式とロケールを指定する
         dateFormatter.dateFormat = DateFormatter.dateFormat(fromTemplate: "yMMMdHms", options: 0, locale: Locale(identifier: "ja_JP"))
-            post.id = 1
-            post.sorena = 0
-            post.name = subjectText.text!
-            post.hashtag = ""
-            post.hashtagOptional = hashtagText.text!
-            post.date = dateFormatter.string(from: dt)
-            post.descriptionString = descriptionTextView.text!
-            post.imageUrl = (IMAGEURL?.absoluteString)!
-            try! REALM.write {
-                REALM.add(post)
-            }
-            
-            subjectText.text = ""
-            hashtagText.text = ""
-            descriptionTextView.text = ""
-            // storyboardのインスタンス取得
-            let itiranStoryboard: UIStoryboard = UIStoryboard(name: "Itiran", bundle: nil)
-            // 遷移先ViewControllerのインスタンス取得
-            let ItiranView = itiranStoryboard.instantiateViewController(withIdentifier: "Itiran") as! ItiranViewController
-            // フルスクリーンにする
-            ItiranView.modalPresentationStyle = .fullScreen
-            // 画面遷移
-            self.present(ItiranView, animated: false, completion: nil)
+        post.sorena = 0
+        post.name = subjectText.text!
+        post.hashtag = ""
+        post.hashtagOptional = hashtagText.text!
+        post.date = dateFormatter.string(from: dt)
+        post.descriptionString = descriptionTextView.text!
+        post.imageUrl = (IMAGEURL?.absoluteString)!
+        if POSTDATA.count != 0{
+            post.id = POSTDATA.max(ofProperty: "id")! + 1
         }
-        //バツボタンがタップされた時の戻る動作
-        @objc func batsuButtonTapped(_ sender: UITapGestureRecognizer) {
-            self.dismiss(animated: true, completion: nil)
+        try! REALM.write {
+            REALM.add(post)
         }
-        //UIImagePickerController
-        func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-            if let selectedImage = info[.originalImage] as? UIImage {
-                imageView.image = selectedImage
-            }
-            if info[UIImagePickerController.InfoKey.originalImage] != nil {
-                // 画像のパスを取得
-                IMAGEURL = info[UIImagePickerController.InfoKey.referenceURL] as? NSURL
-            }
-            self.dismiss(animated: true)
+        
+        subjectText.text = ""
+        hashtagText.text = ""
+        descriptionTextView.text = ""
+        // storyboardのインスタンス取得
+        let itiranStoryboard: UIStoryboard = UIStoryboard(name: "Itiran", bundle: nil)
+        // 遷移先ViewControllerのインスタンス取得
+        let ItiranView = itiranStoryboard.instantiateViewController(withIdentifier: "Itiran") as! ItiranViewController
+        // フルスクリーンにする
+        ItiranView.modalPresentationStyle = .fullScreen
+        // 画面遷移
+        self.present(ItiranView, animated: false, completion: nil)
+    }
+    //バツボタンがタップされた時の戻る動作
+    @objc func batsuButtonTapped(_ sender: UITapGestureRecognizer) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    //UIImagePickerController
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let selectedImage = info[.originalImage] as? UIImage {
+            imageView.image = selectedImage
         }
-        //canselButtonを設定
-        func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-            self.dismiss(animated: true)
+        if info[UIImagePickerController.InfoKey.originalImage] != nil {
+            // 画像のパスを取得
+            IMAGEURL = info[UIImagePickerController.InfoKey.referenceURL] as? NSURL
         }
-        //画面をタップしたらキーボードが閉じる
-        override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-            view.endEditing(true)
+        self.dismiss(animated: true)
+    }
+    //canselButtonを設定
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        self.dismiss(animated: true)
+    }
+    //画面をタップしたらキーボードが閉じる
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
+    }
+    /*
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
+}
+
+//TextViewにplaceholderを入れるための拡張
+final class PlaceTextView: UITextView {
+    
+    var placeHolder: String = "" {
+        willSet {
+            self.placeHolderLabel.text = newValue
+            self.placeHolderLabel.sizeToFit()
         }
-        /*
-         // MARK: - Navigation
-         
-         // In a storyboard-based application, you will often want to do a little preparation before navigation
-         override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-         // Get the new view controller using segue.destination.
-         // Pass the selected object to the new view controller.
-         }
-         */
+    }
+    
+    private lazy var placeHolderLabel: UILabel = {
+        let label = UILabel()
+        label.lineBreakMode = .byWordWrapping
+        label.numberOfLines = 0
+        label.font = self.font
+        label.textColor = .gray
+        label.backgroundColor = .clear
+        label.translatesAutoresizingMaskIntoConstraints = false
+        self.addSubview(label)
+        return label
+    }()
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(textDidChanged),
+                                               name: UITextView.textDidChangeNotification,
+                                               object: nil)
+        
+        NSLayoutConstraint.activate([
+            placeHolderLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 7),
+            placeHolderLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: 7),
+            placeHolderLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 5),
+            placeHolderLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 5)
+        ])
         
     }
     
-    //TextViewにplaceholderを入れるための拡張
-    final class PlaceTextView: UITextView {
-        
-        var placeHolder: String = "" {
-            willSet {
-                self.placeHolderLabel.text = newValue
-                self.placeHolderLabel.sizeToFit()
-            }
-        }
-        
-        private lazy var placeHolderLabel: UILabel = {
-            let label = UILabel()
-            label.lineBreakMode = .byWordWrapping
-            label.numberOfLines = 0
-            label.font = self.font
-            label.textColor = .gray
-            label.backgroundColor = .clear
-            label.translatesAutoresizingMaskIntoConstraints = false
-            self.addSubview(label)
-            return label
-        }()
-        
-        override func awakeFromNib() {
-            super.awakeFromNib()
-            
-            NotificationCenter.default.addObserver(self,
-                                                   selector: #selector(textDidChanged),
-                                                   name: UITextView.textDidChangeNotification,
-                                                   object: nil)
-            
-            NSLayoutConstraint.activate([
-                placeHolderLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 7),
-                placeHolderLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: 7),
-                placeHolderLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 5),
-                placeHolderLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 5)
-            ])
-            
-        }
-        
-        @objc private func textDidChanged() {
-            let shouldHidden = self.placeHolder.isEmpty || !self.text.isEmpty
-            self.placeHolderLabel.alpha = shouldHidden ? 0 : 1
-        }
-        
+    @objc private func textDidChanged() {
+        let shouldHidden = self.placeHolder.isEmpty || !self.text.isEmpty
+        self.placeHolderLabel.alpha = shouldHidden ? 0 : 1
     }
+    
+}
