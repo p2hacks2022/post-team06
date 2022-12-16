@@ -15,11 +15,26 @@ class CustomCellCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var MainImage: UIImageView!
     @IBOutlet weak var SorenaImage: UIImageView!
     
+<<<<<<< HEAD
     
     func setupCell(model: Model){
     func configureCell(model: Model){
         self.NameLabel.text = model.name
         self.TagLabel.text = model.hashtag
+=======
+    /*func setupCell(model: Model){
+        NameLabel.text = model.Name
+        if let text = model.Tag{
+            TagLabel.text = text
+        }
+        self.backgroundColor = .white
+    }*/
+    func setupCell(model: PostJson){
+        NameLabel.text = model.name
+        if let text = model.hashtag{
+            TagLabel.text = text
+        }
+>>>>>>> 5673d59 (途中)
         self.backgroundColor = .white
     }
 //    func configureCell(model: Model){
