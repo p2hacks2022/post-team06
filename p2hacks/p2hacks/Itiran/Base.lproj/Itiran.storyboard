@@ -4,7 +4,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
-        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -18,13 +17,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mMs-gO-9B9">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
-                                <color key="backgroundColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Vqv-qZ-Bcd">
                                 <rect key="frame" x="0.0" y="199" width="414" height="148"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -40,13 +32,6 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="Xpc-kY-4gh"/>
                                 </connections>
                             </collectionView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="title" translatesAutoresizingMaskIntoConstraints="NO" id="bg5-YQ-brl">
-                                <rect key="frame" x="159" y="48" width="97" height="37"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="93" id="Kqg-hJ-B4C"/>
-                                    <constraint firstAttribute="height" constant="37" id="NUt-G5-kKo"/>
-                                </constraints>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a8v-nR-wbu">
                                 <rect key="frame" x="330" y="798" width="64" height="64"/>
                                 <constraints>
@@ -71,16 +56,27 @@
                                     <segue destination="aVl-Kg-G3Y" kind="show" identifier="toDetail" animates="NO" id="GtA-0W-bQj"/>
                                 </connections>
                             </button>
-                            <searchBar contentMode="redraw" text="Search" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JJo-5y-hbF">
-                                <rect key="frame" x="0.0" y="94" width="414" height="56"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mMs-gO-9B9">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
                                 <color key="backgroundColor" systemColor="labelColor"/>
-                                <color key="tintColor" name="AccentColor"/>
-                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <searchBar contentMode="redraw" text="Sesrch" translatesAutoresizingMaskIntoConstraints="NO" id="E5T-Ng-XxT">
+                                <rect key="frame" x="10" y="100" width="394" height="56"/>
+                                <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                <color key="barTintColor" systemColor="secondarySystemGroupedBackgroundColor"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Sln-F7-SMB"/>
-                                </connections>
                             </searchBar>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="title" translatesAutoresizingMaskIntoConstraints="NO" id="bg5-YQ-brl">
+                                <rect key="frame" x="159" y="48" width="97" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="93" id="Kqg-hJ-B4C"/>
+                                    <constraint firstAttribute="height" constant="37" id="NUt-G5-kKo"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -88,42 +84,28 @@
                             <constraint firstItem="a8v-nR-wbu" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="5tu-by-xsT"/>
                             <constraint firstItem="mMs-gO-9B9" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="6hG-mn-8xZ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Vqv-qZ-Bcd" secondAttribute="bottom" constant="515" id="8GI-jq-G17"/>
-                            <constraint firstItem="JJo-5y-hbF" firstAttribute="top" secondItem="bg5-YQ-brl" secondAttribute="bottom" constant="10" id="BZl-uS-ket"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="a8v-nR-wbu" secondAttribute="trailing" constant="20" id="G7h-vm-WHd"/>
-                            <constraint firstItem="JJo-5y-hbF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="I3S-7a-zkS"/>
-                            <constraint firstItem="JJo-5y-hbF" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Kkd-p0-aIa"/>
+                            <constraint firstItem="E5T-Ng-XxT" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-10" id="GsW-Mc-P68"/>
                             <constraint firstItem="Vqv-qZ-Bcd" firstAttribute="top" secondItem="bg5-YQ-brl" secondAttribute="bottom" constant="114" id="RFw-b4-qai"/>
-                            <constraint firstItem="JJo-5y-hbF" firstAttribute="top" secondItem="bg5-YQ-brl" secondAttribute="bottom" constant="9" id="U2K-8K-g1J"/>
                             <constraint firstAttribute="bottom" secondItem="Vqv-qZ-Bcd" secondAttribute="bottom" id="Uia-QX-hIV"/>
                             <constraint firstItem="mMs-gO-9B9" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="XCv-99-UNr"/>
+                            <constraint firstItem="E5T-Ng-XxT" firstAttribute="top" secondItem="bg5-YQ-brl" secondAttribute="bottom" constant="15" id="YSJ-67-gdX"/>
                             <constraint firstItem="Vqv-qZ-Bcd" firstAttribute="top" secondItem="mMs-gO-9B9" secondAttribute="bottom" constant="8" symbolic="YES" id="bfj-iT-0aC"/>
                             <constraint firstItem="mMs-gO-9B9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="gg1-Fg-nEN"/>
                             <constraint firstItem="Vqv-qZ-Bcd" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="goH-kc-qe7"/>
                             <constraint firstItem="Vqv-qZ-Bcd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="jZi-bW-sfv"/>
                             <constraint firstItem="bg5-YQ-brl" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="w6k-aD-kh7"/>
-                            <constraint firstItem="JJo-5y-hbF" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="xI9-lC-VII"/>
-                            <constraint firstItem="JJo-5y-hbF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="zR9-wH-efv"/>
+                            <constraint firstItem="E5T-Ng-XxT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="yWA-dy-Uhb"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="PostButton" destination="a8v-nR-wbu" id="88l-Kc-E40"/>
-                        <outlet property="SearchBar" destination="JJo-5y-hbF" id="F2p-d9-Sju"/>
-                        <outlet property="SerchBar" destination="JJo-5y-hbF" id="qU0-NH-q14"/>
+                        <outlet property="SearchBar" destination="E5T-Ng-XxT" id="jhU-Pa-Aop"/>
                         <outlet property="TitleImage" destination="bg5-YQ-brl" id="EtH-ln-uGp"/>
                         <outlet property="collectionview" destination="Vqv-qZ-Bcd" id="iHC-XA-ANx"/>
-                        <outlet property="searchDisplayController" destination="3Z8-n8-iHF" id="Ri7-0G-hFI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <searchDisplayController id="3Z8-n8-iHF">
-                    <connections>
-                        <outlet property="delegate" destination="BYZ-38-t0r" id="bVc-gx-pbq"/>
-                        <outlet property="searchBar" destination="JJo-5y-hbF" id="PRJ-zf-jZX"/>
-                        <outlet property="searchContentsController" destination="BYZ-38-t0r" id="Wi7-hh-XYS"/>
-                        <outlet property="searchResultsDataSource" destination="BYZ-38-t0r" id="KZG-rg-1Vr"/>
-                        <outlet property="searchResultsDelegate" destination="BYZ-38-t0r" id="OA3-3R-eWB"/>
-                    </connections>
-                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="-1417.3913043478262" y="-40.178571428571423"/>
         </scene>
@@ -141,11 +123,14 @@
     <resources>
         <image name="post" width="295" height="295"/>
         <image name="title" width="287" height="78"/>
-        <namedColor name="AccentColor">
-            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="secondarySystemGroupedBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
