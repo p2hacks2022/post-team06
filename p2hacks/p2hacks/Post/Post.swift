@@ -22,3 +22,13 @@ class Post: Object, Codable {
         return "id"
     }
 }
+
+/*struct PostJson: Codable {
+    let id:String
+    let name:String
+    let hashtag:String
+    let hashtagOptional:String
+    let sorena:String
+    let date:String
+    let explanation:String
+}*/

@@ -15,14 +15,19 @@ class CustomCellCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var MainImage: UIImageView!
     @IBOutlet weak var SorenaImage: UIImageView!
     
-    func setupCell(model: Model){
+    /*func setupCell(model: Model){
         NameLabel.text = model.Name
         if let text = model.Tag{
             TagLabel.text = text
         }
         self.backgroundColor = .white
-    
-        
+    }*/
+    func setupCell(model: PostJson){
+        NameLabel.text = model.name
+        if let text = model.hashtag{
+            TagLabel.text = text
+        }
+        self.backgroundColor = .white
     }
     
     override func awakeFromNib() {
