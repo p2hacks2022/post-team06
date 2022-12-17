@@ -212,7 +212,7 @@
                         <outlet property="descriptionTextView" destination="m8L-0W-6lt" id="18O-h9-cBS"/>
                         <outlet property="foodButton" destination="qvE-K8-7ih" id="Zfc-5k-oiT"/>
                         <outlet property="humanButton" destination="gyg-vs-89r" id="4ze-sq-p3E"/>
-                        <outlet property="imageView" destination="KGZ-RU-p4q" id="Of8-Uo-zOD"/>
+                        <outlet property="imageView" destination="der-Es-0Ie" id="M1l-tv-ste"/>
                         <outlet property="kotobaButton" destination="oeT-HP-x3M" id="uIa-wH-o7d"/>
                         <outlet property="musicButton" destination="Q3Y-JF-9pH" id="Yjl-8p-NVy"/>
                         <outlet property="postButton" destination="iaH-gI-xTr" id="vst-W3-iP4"/>
