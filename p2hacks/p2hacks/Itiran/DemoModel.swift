@@ -7,16 +7,6 @@
 
 import Foundation
 
-//struct Model:Codable{
-//    let name_id: Int
-//    let name: String
-//    let tag_main: Int
-//    let tag_sub: String
-//    let date: Date
-//    let explanation: String
-//
-//}
-
 struct PostJson {
     let id:String
     let name:String
@@ -82,44 +72,6 @@ struct PostJson {
             PostJson(id: "48", name: "Habit", hashtag: "3", hashtagOptional: "", sorena: "331", date: "2.02212E+13", explanation: "日本のバンド「SEKAI NO OWARI」のメジャー16作目のシングル曲"),
             PostJson(id: "49", name: "ちゅきちゅきハリケーン", hashtag: "3", hashtagOptional: "ジャニーズ", sorena: "193", date: "2.02212E+13", explanation: "日本の男性アイドルグループ「なにわ男子」の楽曲の一つ"),
             PostJson(id: "50", name: "PAKU", hashtag: "3", hashtagOptional: "TikTok", sorena: "124", date: "2.02212E+13", explanation: "シンガーソンングライター「asmi」の楽曲の一つ"),
-        ]
-    }
-}
-
-//,PostJson(id: "1", name: "平成フラミンゴ", hashtag: "1", hashtagOptional: "YouTuber", sorena: "529", date: "2.02212E+13", explanation: "女性2人組のYouTuber")
-
-struct Model {
-    let Name: String
-    let Tag: String?
-    
-    static func createModels() -> [Model] {
-        return [
-            Model(Name: "AAAAAAAAAA", Tag: "aaaaaaaaaa"),
-            Model(Name: "BBBBBBBBBB", Tag: "bbbbbbbbbb"),
-            Model(Name: "CCCCCCCCCC", Tag: "cccccccccc"),
-            Model(Name: "DDDDDDDDDD", Tag: "dddddddddd"),
-            Model(Name: "EEEEEEEEEE", Tag: "eeeeeeeeee"),
-            Model(Name: "FFFFFFFFFF", Tag: "ffffffffff"),
-            Model(Name: "GGGGGGGGGG", Tag: "gggggggggg"),
-            Model(Name: "HHHHHHHHHH", Tag: "hhhhhhhhhh"),
-            Model(Name: "IIIIIIIIII", Tag: "iiiiiiiiii"),
-            Model(Name: "JJJJJJJJJJ", Tag: "jjjjjjjjjj"),
-            Model(Name: "KKKKKKKKKK", Tag: "kkkkkkkkkk"),
-            Model(Name: "LLLLLLLLLL", Tag: "llllllllll"),
-            Model(Name: "MMMMMMMMMM", Tag: "mmmmmmmmmm"),
-            Model(Name: "NNNNNNNNNN", Tag: nil),
-            Model(Name: "OOOOOOOOOO", Tag: nil),
-            Model(Name: "PPPPPPPPPP", Tag: nil),
-            Model(Name: "QQQQQQQQQQ", Tag: nil),
-            Model(Name: "RRRRRRRRRR", Tag: nil),
-            Model(Name: "SSSSSSSSSS", Tag: nil),
-            Model(Name: "TTTTTTTTTT", Tag: nil),
-            Model(Name: "UUUUUUUUUU", Tag: nil),
-            Model(Name: "VVVVVVVVVV", Tag: nil),
-            Model(Name: "WWWWWWWWWW", Tag: nil),
-            Model(Name: "XXXXXXXXXX", Tag: nil),
-            Model(Name: "YYYYYYYYYY", Tag: nil),
-            Model(Name: "ZZZZZZZZZZ", Tag: nil),
         ]
     }
 }

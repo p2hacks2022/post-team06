@@ -15,13 +15,6 @@ class CustomCellCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var MainImage: UIImageView!
     @IBOutlet weak var SorenaImage: UIImageView!
     
-    /*func setupCell(model: Model){
-        NameLabel.text = model.Name
-        if let text = model.Tag{
-            TagLabel.text = text
-        }
-        self.backgroundColor = .white
-    }*/
     func setupCell(model: PostJson){
         NameLabel.text = model.name
         SorenaLabel.text = model.sorena
