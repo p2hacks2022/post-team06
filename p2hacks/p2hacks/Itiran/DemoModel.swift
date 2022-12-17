@@ -16,6 +16,7 @@ struct PostJson {
     let date:String
     let explanation:String
     static func createModels() -> [PostJson] {
+
         return [
             PostJson(id: "1", name: "平成フラミンゴ", hashtag: "1", hashtagOptional: "YouTuber", sorena: "529", date: "2.02212E+13", explanation: "女性2人組のYouTuber")
             ,PostJson(id: "2", name: "IVE", hashtag: "1", hashtagOptional: "韓国", sorena: "112", date: "2.02212E+13", explanation: "韓国の6人組女性アイドルグループ"),
@@ -74,4 +75,42 @@ struct PostJson {
             PostJson(id: "50", name: "PAKU", hashtag: "3", hashtagOptional: "TikTok", sorena: "124", date: "2.02212E+13", explanation: "シンガーソンングライター「asmi」の楽曲の一つ"),
         ]
     }
+
 }
+
+//extension Bundle {
+//    func decodeJSON<T: Codable>(_ file: String) -> T {
+//        guard let url = self.url(forResource: file, withExtension: nil) else {
+//            fatalError("Faild to locate \(file) in bundle.")
+//        }
+//
+//        guard let data = try? Data(contentsOf: url) else {
+//            fatalError("Failed to load \(file) from bundle.")
+//        }
+//
+//        let decoder = JSONDecoder()
+//        guard let loaded = try? decoder.decode(T.self, from: data) else {
+//            fatalError("Failed to decode \(file) from bundle.")
+//        }
+//
+//        return loaded
+//    }
+//}
+//
+//let model: [Model] = Bundle.main.decodeJSON("Data.json")
+
+
+//struct Model {
+//    let Name: String
+//    let Tag: String?
+//
+//    static func createModels() -> [Model] {
+//        return [
+//            Model(Name: "AAAAAAAAAA", Tag: "aaaaaaaaaa"),
+//            Model(Name: "BBBBBBBBBB", Tag: "bbbbbbbbbb"),
+//            Model(Name: "CCCCCCCCCC", Tag: "cccccccccc"),
+//            Model(Name: "DDDDDDDDDD", Tag: "dddddddddd"),
+//        ]
+//    }
+//}
+

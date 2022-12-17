@@ -7,6 +7,7 @@
 
 import UIKit
 import Firebase
+import FirebaseStorageUI
 
 var IMAGEURL = NSURL(string: "")
 
@@ -29,6 +30,12 @@ class PostViewController: UIViewController, UIImagePickerControllerDelegate, UIN
                 print(key)//keyを取得
             }
         })
+        //ここから
+        //storageのURLを参照
+        let storageref = Storage.storage().reference(forURL: "gs://p2hacks-8da7c.appspot.com").child("1.png")
+        //画像をセット
+        imageView.sd_setImage(with: storageref)
+        //表示ここまで
 
         //imageViewにタップ判定をつけるためのもの
         imageView.isUserInteractionEnabled = true
@@ -49,14 +56,54 @@ class PostViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         present(picker, animated: true)
         self.present(picker, animated: true)
     }
+    fileprivate func upload(_ date:Date) {
+            let currentTimeStampInSecond = UInt64(floor(date.timeIntervalSince1970 * 1000))
+            let storageRef = Storage.storage().reference().child("images").child("\(currentTimeStampInSecond).jpg")
+        
+            let metaData = StorageMetadata()
+            metaData.contentType = "image/jpg"
+            if let uploadData = self.imageView.image?.jpegData(compressionQuality: 0.9) {
+                storageRef.putData(uploadData, metadata: metaData) { (metadata , error) in
+                    if error != nil {
+                        print("error: \(String(describing: error?.localizedDescription))")
+                    }
+                    storageRef.downloadURL(completion: { (url, error) in
+                        if error != nil {
+                            print("error: \(String(describing: error?.localizedDescription))")
+                        }
+                        print("url: \(String(describing: url?.absoluteString))")
+                    })
+                }
+            }
+        }
     //投稿ボタンが押されたときの動作
     @IBAction func addPostButtonAction(_ sender: Any) {
         let dt = Date()
         let dateFormatter = DateFormatter()
         // DateFormatter を使用して書式とロケールを指定する
         dateFormatter.dateFormat = DateFormatter.dateFormat(fromTemplate: "yMMMdHms", options: 0, locale: Locale(identifier: "ja_JP"))
+
+//        post.sorena = 0
+//        post.name = subjectText.text!
+//        post.hashtag = ""
+//        post.hashtagOptional = hashtagText.text!
+//        post.date = dateFormatter.string(from: dt)
+//        post.explanation = descriptionTextView.text!
+//        post.imageUrl = (IMAGEURL?.absoluteString)!
+//        // post.idをどんどん足していく
+//        if POSTDATA.count != 0{
+//            post.id = POSTDATA.max(ofProperty: "id")! + 1
+        //}
+//        // Realmに書き込み
+//        try! REALM.write {
+//            REALM.add(post)
+//        }
+        
+
         let data = ["name": subjectText.text!,"hashtagOptional":hashtagText.text!,"sorena":String(0),"hashtag":"","date":dateFormatter.string(from: dt),"explanation":descriptionTextView.text!,"imageUrl":(IMAGEURL?.absoluteString)!]
-        DBRef.child("postData").childByAutoId().setValue(data)
+        //DBRef.child("postData").childByAutoId().setValue(data)
+        DBRef.child("postData/\(UInt64(floor(dt.timeIntervalSince1970 * 1000)))").setValue(data)
+        upload(dt)
         subjectText.text = ""
         hashtagText.text = ""
         descriptionTextView.text = ""
@@ -66,8 +113,11 @@ class PostViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         let ItiranView = itiranStoryboard.instantiateViewController(withIdentifier: "Itiran") as! ItiranViewController
         // フルスクリーンにする
         ItiranView.modalPresentationStyle = .fullScreen
+        
+       let naviVc = UINavigationController(rootViewController: ItiranView)
+        
         // 画面遷移
-        self.present(ItiranView, animated: false, completion: nil)
+        self.present(naviVc, animated: false, completion: nil)
     }
     //バツボタンがタップされた時の戻る動作
     @objc func batsuButtonTapped(_ sender: UITapGestureRecognizer) {
