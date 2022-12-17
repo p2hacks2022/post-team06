@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 55;
+	objectVersion = 56;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,7 +14,8 @@
 		8730B97029474DB4006BB0C3 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8730B96F29474DB4006BB0C3 /* DetailViewController.swift */; };
 		8730B97229474E08006BB0C3 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8730B97129474E08006BB0C3 /* PostViewController.swift */; };
 		87D9706B2949D298006814B0 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D9706A2949D298006814B0 /* Post.swift */; };
-		87D97074294B23F8006814B0 /* Data.json in Resources */ = {isa = PBXBuildFile; fileRef = 87D97073294B23F8006814B0 /* Data.json */; };
+		87D97074294B23F8006814B0 /* (null) in Resources */ = {isa = PBXBuildFile; };
+		926C4C0E294D835300D693A2 /* image.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 926C4C0D294D835300D693A2 /* image.xcassets */; };
 		928B8FBA294B48A20044F374 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 928B8FB9294B48A20044F374 /* GoogleService-Info.plist */; };
 		928B8FBB294B4FBA0044F374 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 928B8FB9294B48A20044F374 /* GoogleService-Info.plist */; };
 		92BF089E2944868000E37B14 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BF089D2944868000E37B14 /* AppDelegate.swift */; };
@@ -59,7 +60,7 @@
 		8730B96F29474DB4006BB0C3 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		8730B97129474E08006BB0C3 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		87D9706A2949D298006814B0 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
-		87D97073294B23F8006814B0 /* Data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Data.json; sourceTree = "<group>"; };
+		926C4C0D294D835300D693A2 /* image.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = image.xcassets; sourceTree = "<group>"; };
 		928B8FB9294B48A20044F374 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		92BF089A2944868000E37B14 /* p2hacks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = p2hacks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92BF089D2944868000E37B14 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -148,7 +149,6 @@
 		87D9706C2949EC99006814B0 /* JSON */ = {
 			isa = PBXGroup;
 			children = (
-				87D97073294B23F8006814B0 /* Data.json */,
 			);
 			path = JSON;
 			sourceTree = "<group>";
@@ -185,6 +185,7 @@
 				8730B97429474E47006BB0C3 /* Post */,
 				8730B97529474E4F006BB0C3 /* Detail */,
 				92BF08A92944868100E37B14 /* Assets.xcassets */,
+				926C4C0D294D835300D693A2 /* image.xcassets */,
 				92BF08AB2944868100E37B14 /* LaunchScreen.storyboard */,
 				92BF08AE2944868100E37B14 /* Info.plist */,
 				92BF08A62944868000E37B14 /* p2hacks.xcdatamodeld */,
@@ -347,7 +348,8 @@
 				92BF08AD2944868100E37B14 /* LaunchScreen.storyboard in Resources */,
 				92FCA4D5294757E400297B5B /* CustomCellCollectionViewCell.xib in Resources */,
 				92BF08AA2944868100E37B14 /* Assets.xcassets in Resources */,
-				87D97074294B23F8006814B0 /* Data.json in Resources */,
+				87D97074294B23F8006814B0 /* (null) in Resources */,
+				926C4C0E294D835300D693A2 /* image.xcassets in Resources */,
 				8730B96E29474DA3006BB0C3 /* Detail.storyboard in Resources */,
 				92BF08A52944868000E37B14 /* Itiran.storyboard in Resources */,
 			);
@@ -664,7 +666,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = S539G95T8G;
+				DEVELOPMENT_TEAM = BWL68L4987;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = p2hacks/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -678,7 +680,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.p2hacks1212;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.p2hacks;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -694,7 +696,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = S539G95T8G;
+				DEVELOPMENT_TEAM = BWL68L4987;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = p2hacks/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -708,7 +710,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.p2hacks1212;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.p2hacks;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
