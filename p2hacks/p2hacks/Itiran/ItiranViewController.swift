@@ -48,10 +48,8 @@ class ItiranViewController: UIViewController {
         // 画面遷移
         self.present(postView, animated: true, completion: nil)
     }
-    @IBOutlet weak var PostButton: UIButton!
-    
-    let models = Model.createModels()
-    
+    @IBOutlet weak var PostButton: UIButton! 
+    let models = PostJson.createModels()  
     override func viewDidLayoutSubviews(){
         super.viewDidLayoutSubviews()
         //POSTDATAに入っているデータの確認用
