@@ -56,21 +56,21 @@ class PostViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         // DateFormatter を使用して書式とロケールを指定する
         dateFormatter.dateFormat = DateFormatter.dateFormat(fromTemplate: "yMMMdHms", options: 0, locale: Locale(identifier: "ja_JP"))
 
-        post.sorena = 0
-        post.name = subjectText.text!
-        post.hashtag = ""
-        post.hashtagOptional = hashtagText.text!
-        post.date = dateFormatter.string(from: dt)
-        post.explanation = descriptionTextView.text!
-        post.imageUrl = (IMAGEURL?.absoluteString)!
-        // post.idをどんどん足していく
-        if POSTDATA.count != 0{
-            post.id = POSTDATA.max(ofProperty: "id")! + 1
-        }
-        // Realmに書き込み
-        try! REALM.write {
-            REALM.add(post)
-        }
+//        post.sorena = 0
+//        post.name = subjectText.text!
+//        post.hashtag = ""
+//        post.hashtagOptional = hashtagText.text!
+//        post.date = dateFormatter.string(from: dt)
+//        post.explanation = descriptionTextView.text!
+//        post.imageUrl = (IMAGEURL?.absoluteString)!
+//        // post.idをどんどん足していく
+//        if POSTDATA.count != 0{
+//            post.id = POSTDATA.max(ofProperty: "id")! + 1
+        //}
+//        // Realmに書き込み
+//        try! REALM.write {
+//            REALM.add(post)
+//        }
         
 
         let data = ["name": subjectText.text!,"hashtagOptional":hashtagText.text!,"sorena":String(0),"hashtag":"","date":dateFormatter.string(from: dt),"explanation":descriptionTextView.text!,"imageUrl":(IMAGEURL?.absoluteString)!]

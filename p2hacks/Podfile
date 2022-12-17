@@ -6,8 +6,9 @@ target 'p2hacks' do
   use_frameworks!
   pod 'FirebaseAuth'
   pod 'FirebaseFirestore'
-pod 'Firebase/Database'
-  # Pods for p2hacks
+  pod 'Firebase/Database'
+  pod 'RealmSwift' 
+ # Pods for p2hacks
 
   target 'p2hacksTests' do
     inherit! :search_paths

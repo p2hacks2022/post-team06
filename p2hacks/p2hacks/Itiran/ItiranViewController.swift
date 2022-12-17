@@ -29,23 +29,23 @@ extension Bundle {
 
 
 
-extension Bundle {
-    func decodeJSON<T: Codable>(_ file: String) -> T {
-        guard let url = self.url(forResource: file, withExtension: nil) else {
-            fatalError("Faild to locate \(file) in bundle.")
-        }
-        
-        guard let data = try? Data(contentsOf: url) else {
-            fatalError("Failed to load \(file) from bundle.")
-        }
-        
-        let decoder = JSONDecoder()
-        guard let loaded = try? decoder.decode(T.self, from: data) else {
-            fatalError("Failed to decode \(file) from bundle.")
-        }
-        return loaded
-    }
-}
+//extension Bundle {
+//    func decodeJSON<T: Codable>(_ file: String) -> T {
+//        guard let url = self.url(forResource: file, withExtension: nil) else {
+//            fatalError("Faild to locate \(file) in bundle.")
+//        }
+//        
+//        guard let data = try? Data(contentsOf: url) else {
+//            fatalError("Failed to load \(file) from bundle.")
+//        }
+//        
+//        let decoder = JSONDecoder()
+//        guard let loaded = try? decoder.decode(T.self, from: data) else {
+//            fatalError("Failed to decode \(file) from bundle.")
+//        }
+//        return loaded
+//    }
+//}
 //let postDatas: [PostJson] = Bundle.main.decodeJSON("Data.json")
 
 
@@ -68,40 +68,26 @@ class ItiranViewController: UIViewController {
         self.present(postView, animated: true, completion: nil)
     }
     @IBOutlet weak var PostButton: UIButton!
-
-        
+    
+    
     let models = PostJson.createModels()
-
+    
     var selectedImage: UIImage?
     let photos = ["1", "2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40","41","42","43","44","45","","46","47","48","49","50",]
     
     override func viewDidLayoutSubviews(){
         super.viewDidLayoutSubviews()
-        
-       
-        
-        
         // Segue 準備
-//        func prepare(for segue: UIStoryboardSegue, sender: Any!) {
-//            if (segue.identifier == "Detail") {
-//                let detailVC: DetailViewController = (segue.destination as? DetailViewController)!
-//                // DetailViewController のselectedImgに選択された画像を設定する
-//                detailVC.selectedImg = selectedImage
-//            }
-//        }
-        
-        
-        
-        
-        
+        //        func prepare(for segue: UIStoryboardSegue, sender: Any!) {
+        //            if (segue.identifier == "Detail") {
+        //                let detailVC: DetailViewController = (segue.destination as? DetailViewController)!
+        //                // DetailViewController のselectedImgに選択された画像を設定する
+        //                detailVC.selectedImg = selectedImage
+        //            }
+        //        }
         //POSTDATAに入っているデータの確認用
-        print("🟥全てのデータ\(POSTDATA)")
-
+        //print("🟥全てのデータ\(POSTDATA)")
     
-    override func viewDidLayoutSubviews(){
-        super.viewDidLayoutSubviews()
-
-        
         collectionview.dataSource = self
         collectionview.delegate = self
         
@@ -110,13 +96,6 @@ class ItiranViewController: UIViewController {
             SearchBar.resignFirstResponder()
             
         }
-        
-        func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-            //キーボード閉じる
-            SearchBar.resignFirstResponder()
-            
-        }
-        
         //画面の中心を表す
         let ViewWidth = Float(UIScreen.main.bounds.size.width)
         //アイコンを中心に表示
@@ -137,6 +116,7 @@ class ItiranViewController: UIViewController {
         
         
         collectionview.collectionViewLayout = layout
+        
     }
 }
 
@@ -177,8 +157,8 @@ extension ItiranViewController: UICollectionViewDataSource {
 extension ItiranViewController: UICollectionViewDelegate {
     // Cell が選択された場合
     func collectionView(_ collectionView: UICollectionView,
-                          didSelectItemAt indexPath: IndexPath) {
- 
+                        didSelectItemAt indexPath: IndexPath) {
+        
         // [indexPath.row] から画像名を探し、UImage を設定
         selectedImage = UIImage(named: photos[indexPath.row])
         if selectedImage != nil {
@@ -190,8 +170,8 @@ extension ItiranViewController: UICollectionViewDelegate {
             let detailView = detailStoryboard.instantiateViewController(withIdentifier: "Detail") as! DetailViewController
             // 画面遷移
             self.present(detailView, animated: false)
-
+            
         }
- 
+        
     }
 }

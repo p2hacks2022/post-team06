@@ -75,7 +75,7 @@ struct PostJson {
             PostJson(id: "50", name: "PAKU", hashtag: "3", hashtagOptional: "TikTok", sorena: "124", date: "2.02212E+13", explanation: "シンガーソンングライター「asmi」の楽曲の一つ"),
         ]
     }
-}
+
 }
 
 //extension Bundle {
