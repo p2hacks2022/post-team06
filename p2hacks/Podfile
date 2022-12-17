@@ -8,6 +8,7 @@ target 'p2hacks' do
   pod 'FirebaseFirestore'
 pod 'Firebase/Database'
 pod "Firebase/Storage"
+pod 'FirebaseUI/Storage'
   # Pods for p2hacks
 
   target 'p2hacksTests' do
