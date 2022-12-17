@@ -7,6 +7,7 @@
 
 import UIKit
 import RealmSwift
+import Firebase
 
 let REALM = try! Realm()
 let POSTDATA = REALM.objects(Post.self)
@@ -18,8 +19,12 @@ class PostViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     @IBOutlet weak var subjectText: UITextField!
     @IBOutlet weak var hashtagText: UITextField!
     @IBOutlet weak var descriptionTextView: PlaceTextView!
+    // インスタンス変数
+    var DBRef:DatabaseReference!
     override func viewDidLoad() {
         super.viewDidLoad()
+        //インスタンスを作成
+        DBRef = Database.database().reference()
         //imageViewにタップ判定をつけるためのもの
         imageView.isUserInteractionEnabled = true
         imageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action:#selector(imageViewTapped(_:))))
@@ -59,6 +64,14 @@ class PostViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         let dateFormatter = DateFormatter()
         // DateFormatter を使用して書式とロケールを指定する
         dateFormatter.dateFormat = DateFormatter.dateFormat(fromTemplate: "yMMMdHms", options: 0, locale: Locale(identifier: "ja_JP"))
+        var data = ["name": subjectText.text!]
+        data.updateValue(hashtagText.text!, forKey: "hashtagOptional")
+        data.updateValue(String(0), forKey: "sorena")
+        data.updateValue("", forKey: "hashtag")
+        data.updateValue(dateFormatter.string(from: dt), forKey: "date")
+        data.updateValue(descriptionTextView.text!, forKey: "explanation")
+        data.updateValue((IMAGEURL?.absoluteString)!, forKey: "imageUrl")
+        DBRef.child("postData").childByAutoId().setValue(data)
         post.sorena = 0
         post.name = subjectText.text!
         post.hashtag = ""
@@ -73,8 +86,7 @@ class PostViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         // Realmに書き込み
         try! REALM.write {
             REALM.add(post)
-        }
-        
+        }  
         subjectText.text = ""
         hashtagText.text = ""
         descriptionTextView.text = ""
