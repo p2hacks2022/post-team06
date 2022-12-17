@@ -7,6 +7,7 @@
 
 import UIKit
 import Firebase
+import FirebaseStorageUI
 
 var IMAGEURL = NSURL(string: "")
 
@@ -29,6 +30,12 @@ class PostViewController: UIViewController, UIImagePickerControllerDelegate, UIN
                 print(key)//keyを取得
             }
         })
+        //ここから
+        //storageのURLを参照
+        let storageref = Storage.storage().reference(forURL: "gs://p2hacks-8da7c.appspot.com").child("1.png")
+        //画像をセット
+        imageView.sd_setImage(with: storageref)
+        //表示ここまで
 
         //imageViewにタップ判定をつけるためのもの
         imageView.isUserInteractionEnabled = true
@@ -52,6 +59,7 @@ class PostViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     fileprivate func upload(_ date:Date) {
             let currentTimeStampInSecond = UInt64(floor(date.timeIntervalSince1970 * 1000))
             let storageRef = Storage.storage().reference().child("images").child("\(currentTimeStampInSecond).jpg")
+        
             let metaData = StorageMetadata()
             metaData.contentType = "image/jpg"
             if let uploadData = self.imageView.image?.jpegData(compressionQuality: 0.9) {
