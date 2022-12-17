@@ -239,6 +239,7 @@
                     <connections>
                         <outlet property="batsuButton" destination="fEi-LM-XOE" id="8Dz-A6-BKh"/>
                         <outlet property="descriptionTextView" destination="m8L-0W-6lt" id="18O-h9-cBS"/>
+                        <outlet property="imageView" destination="der-Es-0Ie" id="ICA-eb-apK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
