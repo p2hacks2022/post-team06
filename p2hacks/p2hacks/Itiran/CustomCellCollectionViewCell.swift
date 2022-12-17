@@ -56,11 +56,11 @@ class CustomCellCollectionViewCell: UICollectionViewCell {
 //            let cellImage = UIImage(named: photos[indexPath.row])
 //            // UIImageをUIImageViewのimageとして設定
 //            imageView.image = cellImage
-//            
+//
 //            // Tag番号を使ってLabelのインスタンス生成
 //            let label = testCell.contentView.viewWithTag(2) as! UILabel
 //            //label.text = photos[indexPath.row]
-//            
+//
 //            return testCell
 //        }
         
