@@ -49,6 +49,25 @@ class PostViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         present(picker, animated: true)
         self.present(picker, animated: true)
     }
+    fileprivate func upload(_ date:Date) {
+            let currentTimeStampInSecond = UInt64(floor(date.timeIntervalSince1970 * 1000))
+            let storageRef = Storage.storage().reference().child("images").child("\(currentTimeStampInSecond).jpg")
+            let metaData = StorageMetadata()
+            metaData.contentType = "image/jpg"
+            if let uploadData = self.imageView.image?.jpegData(compressionQuality: 0.9) {
+                storageRef.putData(uploadData, metadata: metaData) { (metadata , error) in
+                    if error != nil {
+                        print("error: \(String(describing: error?.localizedDescription))")
+                    }
+                    storageRef.downloadURL(completion: { (url, error) in
+                        if error != nil {
+                            print("error: \(String(describing: error?.localizedDescription))")
+                        }
+                        print("url: \(String(describing: url?.absoluteString))")
+                    })
+                }
+            }
+        }
     //投稿ボタンが押されたときの動作
     @IBAction func addPostButtonAction(_ sender: Any) {
         let dt = Date()
@@ -56,7 +75,9 @@ class PostViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         // DateFormatter を使用して書式とロケールを指定する
         dateFormatter.dateFormat = DateFormatter.dateFormat(fromTemplate: "yMMMdHms", options: 0, locale: Locale(identifier: "ja_JP"))
         let data = ["name": subjectText.text!,"hashtagOptional":hashtagText.text!,"sorena":String(0),"hashtag":"","date":dateFormatter.string(from: dt),"explanation":descriptionTextView.text!,"imageUrl":(IMAGEURL?.absoluteString)!]
-        DBRef.child("postData").childByAutoId().setValue(data)
+        //DBRef.child("postData").childByAutoId().setValue(data)
+        DBRef.child("postData/\(UInt64(floor(dt.timeIntervalSince1970 * 1000)))").setValue(data)
+        upload(dt)
         subjectText.text = ""
         hashtagText.text = ""
         descriptionTextView.text = ""
