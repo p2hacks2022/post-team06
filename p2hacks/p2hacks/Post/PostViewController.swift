@@ -22,6 +22,14 @@ class PostViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         super.viewDidLoad()
         //インスタンスを作成
         DBRef = Database.database().reference()
+        let reference = DBRef.child("postData")
+        reference.observe(.value, with: { snapshot in
+            for child in snapshot.children {
+                let key = (child as AnyObject).key as String
+                print(key)//keyを取得
+            }
+        })
+
         //imageViewにタップ判定をつけるためのもの
         imageView.isUserInteractionEnabled = true
         imageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action:#selector(imageViewTapped(_:))))
