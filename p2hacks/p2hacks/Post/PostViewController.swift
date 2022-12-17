@@ -6,11 +6,8 @@
 //
 
 import UIKit
-import RealmSwift
 import Firebase
 
-let REALM = try! Realm()
-let POSTDATA = REALM.objects(Post.self)
 var IMAGEURL = NSURL(string: "")
 
 class PostViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
@@ -33,19 +30,6 @@ class PostViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         batsuButton.addGestureRecognizer(UITapGestureRecognizer(target: self, action:#selector(batsuButtonTapped(_:))))
         //textViewにplaceHolderを設定
         descriptionTextView.placeHolder = "説明を入力してください。"
-        //POSTDATAに入っているデータの確認用
-        print("🟥全てのデータ\(POSTDATA)")
-        //以下はREALMのデータベースに保存しているデータを削除するときのものだから必要に応じて使って！
-        /*
-         let result = REALM.objects(Post.self)
-         // ③ 部署を更新する
-         do{
-         try REALM.write{
-         REALM.delete(result)
-         }
-         }catch {
-         print("Error \(error)")
-         }*/
         // Do any additional setup after loading the view.
     }
     //imageViewがタップされた時の動作
@@ -59,7 +43,6 @@ class PostViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     }
     //投稿ボタンが押されたときの動作
     @IBAction func addPostButtonAction(_ sender: Any) {
-        let post = Post()
         let dt = Date()
         let dateFormatter = DateFormatter()
         // DateFormatter を使用して書式とロケールを指定する
@@ -72,21 +55,6 @@ class PostViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         data.updateValue(descriptionTextView.text!, forKey: "explanation")
         data.updateValue((IMAGEURL?.absoluteString)!, forKey: "imageUrl")
         DBRef.child("postData").childByAutoId().setValue(data)
-        post.sorena = 0
-        post.name = subjectText.text!
-        post.hashtag = ""
-        post.hashtagOptional = hashtagText.text!
-        post.date = dateFormatter.string(from: dt)
-        post.explanation = descriptionTextView.text!
-        post.imageUrl = (IMAGEURL?.absoluteString)!
-        // post.idをどんどん足していく
-        if POSTDATA.count != 0{
-            post.id = POSTDATA.max(ofProperty: "id")! + 1
-        }
-        // Realmに書き込み
-        try! REALM.write {
-            REALM.add(post)
-        }  
         subjectText.text = ""
         hashtagText.text = ""
         descriptionTextView.text = ""
