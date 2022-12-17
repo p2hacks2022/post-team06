@@ -152,16 +152,6 @@
             </objects>
             <point key="canvasLocation" x="-1417.3913043478262" y="-40.178571428571423"/>
         </scene>
-        <!--Detail-->
-        <scene sceneID="FrB-Ep-Q9J">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Detail" id="aVl-Kg-G3Y" userLabel="Detail" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="KSX-DN-8aQ"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ddK-4i-FXr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-444" y="57"/>
-        </scene>
     </scenes>
     <resources>
         <image name="bubble.left.fill" catalog="system" width="128" height="110"/>
