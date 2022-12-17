@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import RealmSwift
 
 class Post: Object, Codable {
     @objc dynamic var id = 51
@@ -22,6 +21,7 @@ class Post: Object, Codable {
         return "id"
     }
 }
+
 
 /*struct PostJson: Codable {
     let id:String

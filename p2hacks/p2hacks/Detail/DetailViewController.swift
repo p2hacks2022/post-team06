@@ -14,6 +14,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var TopImage: UIImageView! //上の写真部分
     @IBOutlet weak var NameLabel: UILabel! //名前ラベル
     
+
     var selectedImg: UIImage!
     @IBOutlet weak var AddImageButton: UIButton! //写真追加ボタン
     override func viewDidLayoutSubviews(){
@@ -41,9 +42,10 @@ class DetailViewController: UIViewController {
                                        width: AddImageButton.frame.width,
                                        height: AddImageButton.frame.height)
         
+
         //コレクションビューで使用するセルを登録
 //        collectionview!.register(UINib(nibName: "CustomCellCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "CustomCellCollectionViewCell")
-        
+
     }
     
     @IBAction func didTapBuckButton(_ sender: Any) {

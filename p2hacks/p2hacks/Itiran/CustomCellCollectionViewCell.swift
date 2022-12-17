@@ -17,7 +17,7 @@ class CustomCellCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var MainImage: UIImageView!
     @IBOutlet weak var SorenaImage: UIImageView!
     
-    
+
     func setupCell(model: Model){
     func configureCell(model: Model){
         self.NameLabel.text = model.name
@@ -44,6 +44,7 @@ class CustomCellCollectionViewCell: UICollectionViewCell {
      
             return testCell
         }
+
     func setupCell(model: PostJson){
         NameLabel.text = model.name
         SorenaLabel.text = model.sorena

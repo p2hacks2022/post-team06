@@ -152,6 +152,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1417.3913043478262" y="-40.178571428571423"/>
+
         </scene>
         <!--Detail-->
         <scene sceneID="niC-vP-2sf">
@@ -162,6 +163,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Evs-bT-TEZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-765" y="-185"/>
+
         </scene>
     </scenes>
     <resources>

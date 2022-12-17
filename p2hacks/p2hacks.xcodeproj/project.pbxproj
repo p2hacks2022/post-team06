@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -60,19 +60,12 @@
 		8730B96F29474DB4006BB0C3 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		8730B97129474E08006BB0C3 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		87D9706A2949D298006814B0 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
-<<<<<<< HEAD
+
 		928B8FB7294A38B00044F374 /* Data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Data.json; path = ../../../../../../Downloads/Data.json; sourceTree = "<group>"; };
-=======
-		87D97073294B23F8006814B0 /* Data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Data.json; sourceTree = "<group>"; };
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 399dfdd (途中)
-=======
-=======
+
 		926C4C0D294D835300D693A2 /* image.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = image.xcassets; sourceTree = "<group>"; };
->>>>>>> 87e0797 (途中)
+
 		928B8FB9294B48A20044F374 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
->>>>>>> 61a6440 (firebase追加)
 		92BF089A2944868000E37B14 /* p2hacks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = p2hacks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92BF089D2944868000E37B14 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		92BF089F2944868000E37B14 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -160,11 +153,7 @@
 		87D9706C2949EC99006814B0 /* JSON */ = {
 			isa = PBXGroup;
 			children = (
-<<<<<<< HEAD
-				928B8FB7294A38B00044F374 /* Data.json */,
-=======
 				87D97073294B23F8006814B0 /* Data.json */,
->>>>>>> 399dfdd (途中)
 			);
 			path = JSON;
 			sourceTree = "<group>";
@@ -364,15 +353,8 @@
 				92BF08AD2944868100E37B14 /* LaunchScreen.storyboard in Resources */,
 				92FCA4D5294757E400297B5B /* CustomCellCollectionViewCell.xib in Resources */,
 				92BF08AA2944868100E37B14 /* Assets.xcassets in Resources */,
-<<<<<<< HEAD
-				928B8FB8294A38B00044F374 /* Data.json in Resources */,
-=======
 				87D97074294B23F8006814B0 /* Data.json in Resources */,
-<<<<<<< HEAD
->>>>>>> 399dfdd (途中)
-=======
 				926C4C0E294D835300D693A2 /* image.xcassets in Resources */,
->>>>>>> 87e0797 (途中)
 				8730B96E29474DA3006BB0C3 /* Detail.storyboard in Resources */,
 				92BF08A52944868000E37B14 /* Itiran.storyboard in Resources */,
 			);
@@ -689,7 +671,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = BWL68L4987;
+				DEVELOPMENT_TEAM = S539G95T8G;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = p2hacks/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -703,7 +685,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.p2hacks;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.p2hacks1212;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -719,7 +701,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = BWL68L4987;
+				DEVELOPMENT_TEAM = S539G95T8G;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = p2hacks/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -733,7 +715,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.p2hacks;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.p2hacks1212;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
