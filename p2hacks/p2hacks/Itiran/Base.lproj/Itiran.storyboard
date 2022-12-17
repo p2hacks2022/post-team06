@@ -146,11 +146,22 @@
                         <outlet property="TopButton" destination="rGi-PU-xH4" id="KLW-w0-yFr"/>
                         <outlet property="WordButton" destination="Qo8-b6-nkQ" id="jut-Fw-YhT"/>
                         <outlet property="collectionview" destination="Vqv-qZ-Bcd" id="iHC-XA-ANx"/>
+                        <segue destination="zw7-up-Pcb" kind="show" id="xAD-0P-Wkx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1417.3913043478262" y="-40.178571428571423"/>
+        </scene>
+        <!--Detail-->
+        <scene sceneID="niC-vP-2sf">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Detail" id="zw7-up-Pcb" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Gqi-mE-qQb"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Evs-bT-TEZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-765" y="-185"/>
         </scene>
     </scenes>
     <resources>

@@ -14,10 +14,15 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var TopImage: UIImageView! //上の写真部分
     @IBOutlet weak var NameLabel: UILabel! //名前ラベル
     
+    var selectedImg: UIImage!
     @IBOutlet weak var AddImageButton: UIButton! //写真追加ボタン
     override func viewDidLayoutSubviews(){
         super.viewDidLayoutSubviews()
-        
+     
+         
+        TopImage.image = selectedImg
+        // 画像のアスペクト比を維持しUIImageViewサイズに収まるように表示
+        TopImage.contentMode = UIView.ContentMode.scaleAspectFit
         
         //画面の中心を表す
         let IconViewWidth = Float(HeadLabel.bounds.size.width)

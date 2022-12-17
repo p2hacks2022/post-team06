@@ -7,6 +7,8 @@
 
 import UIKit
 
+
+
 class CustomCellCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var NameLabel: UILabel!
@@ -15,6 +17,7 @@ class CustomCellCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var MainImage: UIImageView!
     @IBOutlet weak var SorenaImage: UIImageView!
     
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     
@@ -32,6 +35,31 @@ class CustomCellCollectionViewCell: UICollectionViewCell {
     }*/
 =======
 >>>>>>> 2f986fa (とりあえず)
+=======
+    let photos = ["1", "2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40","41","42","43","44","45","","46","47","48","49","50"]
+    
+    func collectionView(_ collectionView: UICollectionView,
+             cellForItemAt indexPath: IndexPath) -> UICollectionViewCell{
+     
+            // Cell はストーリーボードで設定したセルのID
+            let testCell:UICollectionViewCell =
+                collectionView.dequeueReusableCell(withReuseIdentifier: "CustomCellCollectionViewCell",
+                for: indexPath)
+        // Tag番号を使ってImageViewのインスタンス生成
+                let imageView = testCell.contentView.viewWithTag(1) as! UIImageView
+                // 画像配列の番号で指定された要素の名前の画像をUIImageとする
+                let cellImage = UIImage(named: photos[indexPath.row])
+                // UIImageをUIImageViewのimageとして設定
+                imageView.image = cellImage
+
+            // Tag番号を使ってLabelのインスタンス生成
+            let label = testCell.contentView.viewWithTag(2) as! UILabel
+            label.text = photos[indexPath.row]
+     
+            return testCell
+        }
+    
+>>>>>>> 87e0797 (途中)
     func setupCell(model: PostJson){
         NameLabel.text = model.name
         SorenaLabel.text = model.sorena

@@ -15,6 +15,7 @@
 		8730B97229474E08006BB0C3 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8730B97129474E08006BB0C3 /* PostViewController.swift */; };
 		87D9706B2949D298006814B0 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D9706A2949D298006814B0 /* Post.swift */; };
 		87D97074294B23F8006814B0 /* Data.json in Resources */ = {isa = PBXBuildFile; fileRef = 87D97073294B23F8006814B0 /* Data.json */; };
+		926C4C0E294D835300D693A2 /* image.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 926C4C0D294D835300D693A2 /* image.xcassets */; };
 		928B8FBA294B48A20044F374 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 928B8FB9294B48A20044F374 /* GoogleService-Info.plist */; };
 		928B8FBB294B4FBA0044F374 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 928B8FB9294B48A20044F374 /* GoogleService-Info.plist */; };
 		92BF089E2944868000E37B14 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BF089D2944868000E37B14 /* AppDelegate.swift */; };
@@ -64,8 +65,12 @@
 =======
 		87D97073294B23F8006814B0 /* Data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Data.json; sourceTree = "<group>"; };
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 399dfdd (途中)
 =======
+=======
+		926C4C0D294D835300D693A2 /* image.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = image.xcassets; sourceTree = "<group>"; };
+>>>>>>> 87e0797 (途中)
 		928B8FB9294B48A20044F374 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 >>>>>>> 61a6440 (firebase追加)
 		92BF089A2944868000E37B14 /* p2hacks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = p2hacks.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -196,6 +201,7 @@
 				8730B97429474E47006BB0C3 /* Post */,
 				8730B97529474E4F006BB0C3 /* Detail */,
 				92BF08A92944868100E37B14 /* Assets.xcassets */,
+				926C4C0D294D835300D693A2 /* image.xcassets */,
 				92BF08AB2944868100E37B14 /* LaunchScreen.storyboard */,
 				92BF08AE2944868100E37B14 /* Info.plist */,
 				92BF08A62944868000E37B14 /* p2hacks.xcdatamodeld */,
@@ -362,7 +368,11 @@
 				928B8FB8294A38B00044F374 /* Data.json in Resources */,
 =======
 				87D97074294B23F8006814B0 /* Data.json in Resources */,
+<<<<<<< HEAD
 >>>>>>> 399dfdd (途中)
+=======
+				926C4C0E294D835300D693A2 /* image.xcassets in Resources */,
+>>>>>>> 87e0797 (途中)
 				8730B96E29474DA3006BB0C3 /* Detail.storyboard in Resources */,
 				92BF08A52944868000E37B14 /* Itiran.storyboard in Resources */,
 			);
