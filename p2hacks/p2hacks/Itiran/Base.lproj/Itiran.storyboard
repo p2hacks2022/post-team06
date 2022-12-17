@@ -53,7 +53,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <searchBar contentMode="redraw" text="Sesrch" translatesAutoresizingMaskIntoConstraints="NO" id="E5T-Ng-XxT">
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="E5T-Ng-XxT">
                                 <rect key="frame" x="10" y="100" width="394" height="56"/>
                                 <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                                 <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
@@ -77,20 +77,20 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="TOP"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nzD-1R-MOk">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nzD-1R-MOk">
                                 <rect key="frame" x="209.5" y="162" width="47" height="34"/>
                                 <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="person.fill" catalog="system"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mie-co-ZmY">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mie-co-ZmY">
                                 <rect key="frame" x="294.5" y="162" width="42" height="34"/>
                                 <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="music.note" catalog="system"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BOc-fl-zjH">
-                                <rect key="frame" x="376.5" y="162" width="51" height="34"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BOc-fl-zjH">
+                                <rect key="frame" x="372" y="162" width="51" height="34"/>
                                 <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="cube.box.fill" catalog="system"/>
@@ -121,7 +121,6 @@
                             <constraint firstItem="Vqv-qZ-Bcd" firstAttribute="top" secondItem="bg5-YQ-brl" secondAttribute="bottom" constant="114" id="RFw-b4-qai"/>
                             <constraint firstAttribute="bottom" secondItem="Vqv-qZ-Bcd" secondAttribute="bottom" id="Uia-QX-hIV"/>
                             <constraint firstItem="mMs-gO-9B9" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="XCv-99-UNr"/>
-                            <constraint firstItem="BOc-fl-zjH" firstAttribute="leading" secondItem="mie-co-ZmY" secondAttribute="trailing" constant="40" id="XOU-Kw-koh"/>
                             <constraint firstItem="E5T-Ng-XxT" firstAttribute="top" secondItem="bg5-YQ-brl" secondAttribute="bottom" constant="15" id="YSJ-67-gdX"/>
                             <constraint firstItem="BOc-fl-zjH" firstAttribute="top" secondItem="E5T-Ng-XxT" secondAttribute="bottom" constant="6" id="ZIR-ym-ZsN"/>
                             <constraint firstItem="Qo8-b6-nkQ" firstAttribute="top" secondItem="E5T-Ng-XxT" secondAttribute="bottom" constant="6" id="ZgM-iD-7UP"/>
