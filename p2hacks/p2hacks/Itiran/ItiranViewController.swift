@@ -28,7 +28,7 @@ class ItiranViewController: UIViewController {
     }
     @IBOutlet weak var PostButton: UIButton!
     
-    //let models = Model.createModels()
+    let models = Model.createModels()
     
     override func viewDidLayoutSubviews(){
         super.viewDidLayoutSubviews()
