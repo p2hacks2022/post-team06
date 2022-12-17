@@ -32,13 +32,6 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="Xpc-kY-4gh"/>
                                 </connections>
                             </collectionView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="title" translatesAutoresizingMaskIntoConstraints="NO" id="bg5-YQ-brl">
-                                <rect key="frame" x="159" y="48" width="97" height="37"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="93" id="Kqg-hJ-B4C"/>
-                                    <constraint firstAttribute="height" constant="37" id="NUt-G5-kKo"/>
-                                </constraints>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a8v-nR-wbu">
                                 <rect key="frame" x="330" y="798" width="64" height="64"/>
                                 <constraints>
@@ -53,22 +46,61 @@
                                     <action selector="PostButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oA9-Bo-YIR"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U9B-w4-R8d">
+                                <rect key="frame" x="269" y="476" width="42" height="85"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="仮"/>
+                                <connections>
+                                    <action selector="KariButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Htl-EB-PEb"/>
+                                    <segue destination="aVl-Kg-G3Y" kind="show" identifier="toDetail" animates="NO" id="GtA-0W-bQj"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mMs-gO-9B9">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
+                                <color key="backgroundColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <searchBar contentMode="redraw" text="Sesrch" translatesAutoresizingMaskIntoConstraints="NO" id="E5T-Ng-XxT">
+                                <rect key="frame" x="10" y="100" width="394" height="56"/>
+                                <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                <color key="barTintColor" systemColor="secondarySystemGroupedBackgroundColor"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="title" translatesAutoresizingMaskIntoConstraints="NO" id="bg5-YQ-brl">
+                                <rect key="frame" x="159" y="48" width="97" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="93" id="Kqg-hJ-B4C"/>
+                                    <constraint firstAttribute="height" constant="37" id="NUt-G5-kKo"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="a8v-nR-wbu" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="5tu-by-xsT"/>
+                            <constraint firstItem="mMs-gO-9B9" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="6hG-mn-8xZ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Vqv-qZ-Bcd" secondAttribute="bottom" constant="515" id="8GI-jq-G17"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="a8v-nR-wbu" secondAttribute="trailing" constant="20" id="G7h-vm-WHd"/>
+                            <constraint firstItem="E5T-Ng-XxT" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-10" id="GsW-Mc-P68"/>
                             <constraint firstItem="Vqv-qZ-Bcd" firstAttribute="top" secondItem="bg5-YQ-brl" secondAttribute="bottom" constant="114" id="RFw-b4-qai"/>
                             <constraint firstAttribute="bottom" secondItem="Vqv-qZ-Bcd" secondAttribute="bottom" id="Uia-QX-hIV"/>
+                            <constraint firstItem="mMs-gO-9B9" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="XCv-99-UNr"/>
+                            <constraint firstItem="E5T-Ng-XxT" firstAttribute="top" secondItem="bg5-YQ-brl" secondAttribute="bottom" constant="15" id="YSJ-67-gdX"/>
+                            <constraint firstItem="Vqv-qZ-Bcd" firstAttribute="top" secondItem="mMs-gO-9B9" secondAttribute="bottom" constant="8" symbolic="YES" id="bfj-iT-0aC"/>
+                            <constraint firstItem="mMs-gO-9B9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="gg1-Fg-nEN"/>
                             <constraint firstItem="Vqv-qZ-Bcd" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="goH-kc-qe7"/>
                             <constraint firstItem="Vqv-qZ-Bcd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="jZi-bW-sfv"/>
                             <constraint firstItem="bg5-YQ-brl" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="w6k-aD-kh7"/>
+                            <constraint firstItem="E5T-Ng-XxT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="yWA-dy-Uhb"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="PostButton" destination="a8v-nR-wbu" id="88l-Kc-E40"/>
+                        <outlet property="SearchBar" destination="E5T-Ng-XxT" id="jhU-Pa-Aop"/>
                         <outlet property="TitleImage" destination="bg5-YQ-brl" id="EtH-ln-uGp"/>
                         <outlet property="collectionview" destination="Vqv-qZ-Bcd" id="iHC-XA-ANx"/>
                     </connections>
@@ -81,6 +113,15 @@
     <resources>
         <image name="post" width="295" height="295"/>
         <image name="title" width="287" height="78"/>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="secondarySystemGroupedBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
