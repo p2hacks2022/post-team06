@@ -8,6 +8,7 @@
 import Foundation
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 struct Model:Codable{
     let id: Int
     let name: String
@@ -27,6 +28,8 @@ struct Model:Codable{
 //
 //}
 
+=======
+>>>>>>> 2f986fa (とりあえず)
 struct PostJson {
     let id:String
     let name:String
@@ -95,6 +98,7 @@ struct PostJson {
         ]
     }
 }
+<<<<<<< HEAD
 
 //,PostJson(id: "1", name: "平成フラミンゴ", hashtag: "1", hashtagOptional: "YouTuber", sorena: "529", date: "2.02212E+13", explanation: "女性2人組のYouTuber")
 
@@ -170,3 +174,5 @@ struct Model {
 //        ]
 //    }
 //}
+=======
+>>>>>>> 2f986fa (とりあえず)

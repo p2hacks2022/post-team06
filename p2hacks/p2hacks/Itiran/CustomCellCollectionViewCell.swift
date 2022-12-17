@@ -16,6 +16,7 @@ class CustomCellCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var SorenaImage: UIImageView!
     
 <<<<<<< HEAD
+<<<<<<< HEAD
     
     func setupCell(model: Model){
     func configureCell(model: Model){
@@ -29,6 +30,8 @@ class CustomCellCollectionViewCell: UICollectionViewCell {
         }
         self.backgroundColor = .white
     }*/
+=======
+>>>>>>> 2f986fa (とりあえず)
     func setupCell(model: PostJson){
         NameLabel.text = model.name
         SorenaLabel.text = model.sorena

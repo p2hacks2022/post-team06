@@ -105,39 +105,9 @@ extension UISearchBar {
 
 
 extension ItiranViewController: UICollectionViewDataSource {
-    /*func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-     let userData = realm.objects(User.self)
-     return userData.count
-     }
-     
-     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-     let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-     let userData = realm.objects(User.self)
-     print(userData[0].name)
-     print(userData[1].name)
-     print(userData[0].age)
-     print(userData[1].age)
-     cell.textLabel!.text = "\(userData[indexPath.row].name)さん"
-     cell.detailTextLabel!.text = String("\(userData[indexPath.row].age)歳")
-     return cell
-     }*/
-    /*func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return postDatas.count
-    }*/
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return models.count
     }
-    /*func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        //セルオブジェクトを取り出し、セルにモデルオブジェクトを渡して設定を行う
-        let cell: CustomCellCollectionViewCell = collectionview.dequeueReusableCell(withReuseIdentifier: "CustomCellCollectionViewCell", for: indexPath) as! CustomCellCollectionViewCell
-        cell.layer.borderColor = UIColor.lightGray.cgColor
-        cell.layer.borderWidth = 0.5
-        cell.NameLabel!.text = "\(postDatas[indexPath.row].name)"
-        cell.TagLabel!.text = "\(postDatas[indexPath.row].hashtagOptional)"
-        
-        return cell
-    }*/
-    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         //セルオブジェクトを取り出し、セルにモデルオブジェクトを渡して設定を行う
         let cell = collectionview.dequeueReusableCell(withReuseIdentifier: "CustomCellCollectionViewCell", for: indexPath)
@@ -150,21 +120,5 @@ extension ItiranViewController: UICollectionViewDataSource {
         }
         return cell
     }
-    /*func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-     let userData = REALM.objects(Post.self)
-     return userData.count
-     }
-     
-     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-     //セルオブジェクトを取り出し、セルにモデルオブジェクトを渡して設定を行う
-     let cell: CustomCellCollectionViewCell = collectionview.dequeueReusableCell(withReuseIdentifier: "CustomCellCollectionViewCell", for: indexPath) as! CustomCellCollectionViewCell
-     let userData = REALM.objects(Post.self)
-     cell.layer.borderColor = UIColor.lightGray.cgColor
-     cell.layer.borderWidth = 0.5
-     cell.NameLabel!.text = "\(userData[indexPath.row].name)"
-     cell.TagLabel!.text = "\(userData[indexPath.row].hashtagOptional)"
-     return cell
-     }*/
-    
 }
 
