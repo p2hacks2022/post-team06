@@ -33,7 +33,13 @@ extension Bundle {
 class ItiranViewController: UIViewController {
     @IBOutlet weak var TitleImage: UIImageView!
     @IBOutlet weak var collectionview: UICollectionView! //collectionview
-    @IBOutlet weak var SearchBar: UISearchBar!
+    @IBOutlet weak var SearchBar: UISearchBar! //検索バー
+    @IBOutlet weak var TopButton: UIButton! //トップボタン
+    @IBOutlet weak var WordButton: UIButton! //言葉ボタン
+    @IBOutlet weak var PeopleButton: UIButton! //人ボタン
+    @IBOutlet weak var MusicButton: UIButton! //音楽ボタン
+    @IBOutlet weak var ThingButton: UIButton! //物事ボタン
+    
     @IBAction func PostButton(_ sender: Any) {
         // storyboardのインスタンス取得
         let postStoryboard: UIStoryboard = UIStoryboard(name: "Post", bundle: nil)
@@ -43,8 +49,10 @@ class ItiranViewController: UIViewController {
         self.present(postView, animated: true, completion: nil)
     }
     @IBOutlet weak var PostButton: UIButton!
+
         
     let models = PostJson.createModels()
+
     
     override func viewDidLayoutSubviews(){
         super.viewDidLayoutSubviews()
@@ -52,6 +60,12 @@ class ItiranViewController: UIViewController {
         print("🟥全てのデータ\(POSTDATA)")
         
         collectionview.dataSource = self
+        
+        func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+            //キーボード閉じる
+            SearchBar.resignFirstResponder()
+            
+        }
         
         //画面の中心を表す
         let ViewWidth = Float(UIScreen.main.bounds.size.width)
@@ -85,7 +99,10 @@ extension UISearchBar {
             return value(forKey: "searchField") as? UITextField
         }
     }
-    
+//    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+//            textField.resignFirstResponder()
+//            return true
+//        }
 }
 
 
