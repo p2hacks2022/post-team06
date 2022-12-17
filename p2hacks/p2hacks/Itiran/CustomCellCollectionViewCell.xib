@@ -18,7 +18,7 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="NAME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lBt-Wv-Xd3">
-                        <rect key="frame" x="192" y="43" width="55.333333333333343" height="24"/>
+                        <rect key="frame" x="192" y="43" width="111" height="24"/>
                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -35,8 +35,8 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cvb-n7-9Ow">
-                        <rect key="frame" x="9" y="25" width="165" height="108"/>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="cvb-n7-9Ow">
+                        <rect key="frame" x="9" y="26.666666666666657" width="165" height="105"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="165" id="WJr-Pa-Eaw"/>
                             <constraint firstAttribute="height" constant="108" id="iLj-X6-0uJ"/>
@@ -55,7 +55,9 @@
                 <constraint firstItem="ORp-Kb-Dyz" firstAttribute="leading" secondItem="cvb-n7-9Ow" secondAttribute="trailing" constant="18" id="DHO-YG-hBU"/>
                 <constraint firstItem="EGV-V4-fyb" firstAttribute="leading" secondItem="cvb-n7-9Ow" secondAttribute="trailing" constant="23" id="HnE-s1-KZi"/>
                 <constraint firstItem="XVa-aU-Y65" firstAttribute="leading" secondItem="EGV-V4-fyb" secondAttribute="trailing" constant="6" id="LBH-gb-rLU"/>
+                <constraint firstAttribute="trailing" secondItem="lBt-Wv-Xd3" secondAttribute="trailing" constant="10" id="Oth-fV-miN"/>
                 <constraint firstItem="lBt-Wv-Xd3" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="43" id="PB9-ng-lfs"/>
+                <constraint firstAttribute="trailing" secondItem="ORp-Kb-Dyz" secondAttribute="trailing" constant="10" id="aIK-6D-qpc"/>
                 <constraint firstItem="cvb-n7-9Ow" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="25" id="bjJ-BK-W6V"/>
                 <constraint firstItem="lBt-Wv-Xd3" firstAttribute="leading" secondItem="cvb-n7-9Ow" secondAttribute="trailing" constant="18" id="blR-Hx-Ujd"/>
                 <constraint firstItem="ORp-Kb-Dyz" firstAttribute="top" secondItem="lBt-Wv-Xd3" secondAttribute="bottom" constant="6" id="q8l-Sc-fHl"/>
@@ -73,6 +75,7 @@
         </collectionViewCell>
     </objects>
     <resources>
+        <image name="photo" catalog="system" width="128" height="93"/>
         <image name="sorena_gray" width="1055" height="1067"/>
     </resources>
 </document>

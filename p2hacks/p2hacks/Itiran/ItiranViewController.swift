@@ -8,6 +8,28 @@
 import UIKit
 import RealmSwift
 
+
+
+extension Bundle {
+    func decodeJSON<T: Codable>(_ file: String) -> T {
+        guard let url = self.url(forResource: file, withExtension: nil) else {
+            fatalError("Faild to locate \(file) in bundle.")
+        }
+        
+        guard let data = try? Data(contentsOf: url) else {
+            fatalError("Failed to load \(file) from bundle.")
+        }
+        
+        let decoder = JSONDecoder()
+        guard let loaded = try? decoder.decode(T.self, from: data) else {
+            fatalError("Failed to decode \(file) from bundle.")
+        }
+        return loaded
+    }
+}
+//let postDatas: [PostJson] = Bundle.main.decodeJSON("Data.json")
+
+
 class ItiranViewController: UIViewController {
     @IBOutlet weak var TitleImage: UIImageView!
     @IBOutlet weak var collectionview: UICollectionView! //collectionview
@@ -21,12 +43,8 @@ class ItiranViewController: UIViewController {
         self.present(postView, animated: true, completion: nil)
     }
     @IBOutlet weak var PostButton: UIButton!
-    
-    @IBAction func KariButton(_ sender: Any) {
-        // Segueのidentifierを指定
-                self.performSegue(withIdentifier: "toDetail", sender: self)
-    }
-    let models = Model.createModels()
+        
+    let models = PostJson.createModels()
     
     override func viewDidLayoutSubviews(){
         super.viewDidLayoutSubviews()
@@ -72,26 +90,9 @@ extension UISearchBar {
 
 
 extension ItiranViewController: UICollectionViewDataSource {
-    /*func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-     let userData = realm.objects(User.self)
-     return userData.count
-     }
-     
-     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-     let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-     let userData = realm.objects(User.self)
-     print(userData[0].name)
-     print(userData[1].name)
-     print(userData[0].age)
-     print(userData[1].age)
-     cell.textLabel!.text = "\(userData[indexPath.row].name)さん"
-     cell.detailTextLabel!.text = String("\(userData[indexPath.row].age)歳")
-     return cell
-     }*/
-    /*func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return models.count
     }
-    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         //セルオブジェクトを取り出し、セルにモデルオブジェクトを渡して設定を行う
         let cell = collectionview.dequeueReusableCell(withReuseIdentifier: "CustomCellCollectionViewCell", for: indexPath)
@@ -103,23 +104,6 @@ extension ItiranViewController: UICollectionViewDataSource {
             cell.setupCell(model: models[indexPath.row])
         }
         return cell
-        
-    }*/
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-     let userData = REALM.objects(Post.self)
-     return userData.count
-     }
-     
-     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-     //セルオブジェクトを取り出し、セルにモデルオブジェクトを渡して設定を行う
-     let cell: CustomCellCollectionViewCell = collectionview.dequeueReusableCell(withReuseIdentifier: "CustomCellCollectionViewCell", for: indexPath) as! CustomCellCollectionViewCell
-     let userData = REALM.objects(Post.self)
-     cell.layer.borderColor = UIColor.lightGray.cgColor
-     cell.layer.borderWidth = 0.5
-     cell.NameLabel!.text = "\(userData[indexPath.row].name)"
-     cell.TagLabel!.text = "\(userData[indexPath.row].hashtagOptional)"
-     return cell
-     }
-    
+    }
 }
 
