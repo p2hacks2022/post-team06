@@ -37,6 +37,12 @@ class ItiranViewController: UIViewController {
         
         collectionview.dataSource = self
         
+        func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+            //キーボード閉じる
+            SearchBar.resignFirstResponder()
+            
+        }
+        
         //画面の中心を表す
         let ViewWidth = Float(UIScreen.main.bounds.size.width)
         //アイコンを中心に表示
@@ -69,7 +75,10 @@ extension UISearchBar {
             return value(forKey: "searchField") as? UITextField
         }
     }
-    
+//    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+//            textField.resignFirstResponder()
+//            return true
+//        }
 }
 
 
