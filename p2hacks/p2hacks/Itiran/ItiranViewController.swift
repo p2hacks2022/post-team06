@@ -11,6 +11,7 @@ import RealmSwift
 class ItiranViewController: UIViewController {
     @IBOutlet weak var TitleImage: UIImageView!
     @IBOutlet weak var collectionview: UICollectionView! //collectionview
+    @IBOutlet weak var SearchBar: UISearchBar!
     @IBAction func PostButton(_ sender: Any) {
         // storyboardのインスタンス取得
         let postStoryboard: UIStoryboard = UIStoryboard(name: "Post", bundle: nil)
@@ -25,8 +26,6 @@ class ItiranViewController: UIViewController {
         // Segueのidentifierを指定
                 self.performSegue(withIdentifier: "toDetail", sender: self)
     }
-  
-    
     let models = Model.createModels()
     
     override func viewDidLayoutSubviews(){
@@ -58,6 +57,19 @@ class ItiranViewController: UIViewController {
         collectionview.collectionViewLayout = layout
     }
 }
+
+//searchbar ios13以降の仕様
+extension UISearchBar {
+    var textField: UITextField? {
+        if #available(iOS 13.0, *) {
+            return searchTextField
+        } else {
+            return value(forKey: "searchField") as? UITextField
+        }
+    }
+    
+}
+
 
 extension ItiranViewController: UICollectionViewDataSource {
     /*func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
