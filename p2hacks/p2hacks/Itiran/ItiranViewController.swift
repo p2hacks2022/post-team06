@@ -6,9 +6,6 @@
 //
 
 import UIKit
-import RealmSwift
-
-
 
 extension Bundle {
     func decodeJSON<T: Codable>(_ file: String) -> T {
@@ -56,8 +53,6 @@ class ItiranViewController: UIViewController {
     
     override func viewDidLayoutSubviews(){
         super.viewDidLayoutSubviews()
-        //POSTDATAに入っているデータの確認用
-        print("🟥全てのデータ\(POSTDATA)")
         
         collectionview.dataSource = self
         

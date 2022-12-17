@@ -6,10 +6,8 @@
 //
 
 import UIKit
-import RealmSwift
+import Firebase
 
-let REALM = try! Realm()
-let POSTDATA = REALM.objects(Post.self)
 var IMAGEURL = NSURL(string: "")
 
 class PostViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
@@ -18,8 +16,20 @@ class PostViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     @IBOutlet weak var subjectText: UITextField!
     @IBOutlet weak var hashtagText: UITextField!
     @IBOutlet weak var descriptionTextView: PlaceTextView!
+    // インスタンス変数
+    var DBRef:DatabaseReference!
     override func viewDidLoad() {
         super.viewDidLoad()
+        //インスタンスを作成
+        DBRef = Database.database().reference()
+        let reference = DBRef.child("postData")
+        reference.observe(.value, with: { snapshot in
+            for child in snapshot.children {
+                let key = (child as AnyObject).key as String
+                print(key)//keyを取得
+            }
+        })
+
         //imageViewにタップ判定をつけるためのもの
         imageView.isUserInteractionEnabled = true
         imageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action:#selector(imageViewTapped(_:))))
@@ -28,19 +38,6 @@ class PostViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         batsuButton.addGestureRecognizer(UITapGestureRecognizer(target: self, action:#selector(batsuButtonTapped(_:))))
         //textViewにplaceHolderを設定
         descriptionTextView.placeHolder = "説明を入力してください。"
-        //POSTDATAに入っているデータの確認用
-        print("🟥全てのデータ\(POSTDATA)")
-        //以下はREALMのデータベースに保存しているデータを削除するときのものだから必要に応じて使って！
-        /*
-         let result = REALM.objects(Post.self)
-         // ③ 部署を更新する
-         do{
-         try REALM.write{
-         REALM.delete(result)
-         }
-         }catch {
-         print("Error \(error)")
-         }*/
         // Do any additional setup after loading the view.
     }
     //imageViewがタップされた時の動作
@@ -54,27 +51,12 @@ class PostViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     }
     //投稿ボタンが押されたときの動作
     @IBAction func addPostButtonAction(_ sender: Any) {
-        let post = Post()
         let dt = Date()
         let dateFormatter = DateFormatter()
         // DateFormatter を使用して書式とロケールを指定する
         dateFormatter.dateFormat = DateFormatter.dateFormat(fromTemplate: "yMMMdHms", options: 0, locale: Locale(identifier: "ja_JP"))
-        post.sorena = 0
-        post.name = subjectText.text!
-        post.hashtag = ""
-        post.hashtagOptional = hashtagText.text!
-        post.date = dateFormatter.string(from: dt)
-        post.explanation = descriptionTextView.text!
-        post.imageUrl = (IMAGEURL?.absoluteString)!
-        // post.idをどんどん足していく
-        if POSTDATA.count != 0{
-            post.id = POSTDATA.max(ofProperty: "id")! + 1
-        }
-        // Realmに書き込み
-        try! REALM.write {
-            REALM.add(post)
-        }
-        
+        let data = ["name": subjectText.text!,"hashtagOptional":hashtagText.text!,"sorena":String(0),"hashtag":"","date":dateFormatter.string(from: dt),"explanation":descriptionTextView.text!,"imageUrl":(IMAGEURL?.absoluteString)!]
+        DBRef.child("postData").childByAutoId().setValue(data)
         subjectText.text = ""
         hashtagText.text = ""
         descriptionTextView.text = ""
