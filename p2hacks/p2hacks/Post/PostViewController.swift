@@ -84,8 +84,11 @@ class PostViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         let ItiranView = itiranStoryboard.instantiateViewController(withIdentifier: "Itiran") as! ItiranViewController
         // フルスクリーンにする
         ItiranView.modalPresentationStyle = .fullScreen
+        
+       let naviVc = UINavigationController(rootViewController: ItiranView)
+        
         // 画面遷移
-        self.present(ItiranView, animated: false, completion: nil)
+        self.present(naviVc, animated: false, completion: nil)
     }
     //バツボタンがタップされた時の戻る動作
     @objc func batsuButtonTapped(_ sender: UITapGestureRecognizer) {

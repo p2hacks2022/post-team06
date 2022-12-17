@@ -12,7 +12,7 @@
         <!--Detail-->
         <scene sceneID="3RH-8k-zYL">
             <objects>
-                <viewController title="Detail" id="tmO-5o-8kT" customClass="DetailViewController" customModule="p2hacks" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Detail" title="Detail" id="tmO-5o-8kT" customClass="DetailViewController" customModule="p2hacks" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4M1-p9-Fy5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -87,6 +87,9 @@
                                 </constraints>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="戻る" image="back"/>
+                                <connections>
+                                    <action selector="didTapBuckButton:" destination="tmO-5o-8kT" eventType="touchUpInside" id="J6S-zh-3j3"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EXPERIENCE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P9l-3V-d9b">
                                 <rect key="frame" x="58" y="428" width="99" height="21"/>

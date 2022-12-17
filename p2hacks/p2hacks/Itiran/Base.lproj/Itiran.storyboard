@@ -146,7 +146,7 @@
                         <outlet property="TopButton" destination="rGi-PU-xH4" id="KLW-w0-yFr"/>
                         <outlet property="WordButton" destination="Qo8-b6-nkQ" id="jut-Fw-YhT"/>
                         <outlet property="collectionview" destination="Vqv-qZ-Bcd" id="iHC-XA-ANx"/>
-                        <segue destination="zw7-up-Pcb" kind="show" id="xAD-0P-Wkx"/>
+                        <segue destination="zw7-up-Pcb" kind="show" identifier="Detail" id="xAD-0P-Wkx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

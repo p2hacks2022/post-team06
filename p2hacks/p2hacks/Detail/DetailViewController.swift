@@ -18,12 +18,6 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var AddImageButton: UIButton! //写真追加ボタン
     override func viewDidLayoutSubviews(){
         super.viewDidLayoutSubviews()
-     
-         
-        TopImage.image = selectedImg
-        // 画像のアスペクト比を維持しUIImageViewサイズに収まるように表示
-        TopImage.contentMode = UIView.ContentMode.scaleAspectFit
-        
         //画面の中心を表す
         let IconViewWidth = Float(HeadLabel.bounds.size.width)
         //アイコンを中心に表示
@@ -47,8 +41,14 @@ class DetailViewController: UIViewController {
                                        width: AddImageButton.frame.width,
                                        height: AddImageButton.frame.height)
         
+        //コレクションビューで使用するセルを登録
+//        collectionview!.register(UINib(nibName: "CustomCellCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "CustomCellCollectionViewCell")
+        
     }
     
+    @IBAction func didTapBuckButton(_ sender: Any) {
+        self.dismiss(animated: false)
+    }
 
     /*
     // MARK: - Navigation

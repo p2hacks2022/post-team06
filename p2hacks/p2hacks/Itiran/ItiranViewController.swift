@@ -61,26 +61,15 @@ class ItiranViewController: UIViewController {
         
        
         
-        // Cell が選択された場合
-        func collectionView(_ collectionView: UICollectionView,
-                              didSelectItemAt indexPath: IndexPath) {
-     
-            // [indexPath.row] から画像名を探し、UImage を設定
-            selectedImage = UIImage(named: photos[indexPath.row])
-            if selectedImage != nil {
-                // SubViewController へ遷移するために Segue を呼び出す
-                performSegue(withIdentifier: "Detail",sender: nil)
-            }
-     
-        }
+        
         // Segue 準備
-        func prepare(for segue: UIStoryboardSegue, sender: Any!) {
-            if (segue.identifier == "Detail") {
-                let detailVC: DetailViewController = (segue.destination as? DetailViewController)!
-                // DetailViewController のselectedImgに選択された画像を設定する
-                detailVC.selectedImg = selectedImage
-            }
-        }
+//        func prepare(for segue: UIStoryboardSegue, sender: Any!) {
+//            if (segue.identifier == "Detail") {
+//                let detailVC: DetailViewController = (segue.destination as? DetailViewController)!
+//                // DetailViewController のselectedImgに選択された画像を設定する
+//                detailVC.selectedImg = selectedImage
+//            }
+//        }
         
         
         
@@ -90,6 +79,7 @@ class ItiranViewController: UIViewController {
         print("🟥全てのデータ\(POSTDATA)")
         
         collectionview.dataSource = self
+        collectionview.delegate = self
         
         func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
             //キーボード閉じる
@@ -154,3 +144,24 @@ extension ItiranViewController: UICollectionViewDataSource {
     }
 }
 
+extension ItiranViewController: UICollectionViewDelegate {
+    // Cell が選択された場合
+    func collectionView(_ collectionView: UICollectionView,
+                          didSelectItemAt indexPath: IndexPath) {
+ 
+        // [indexPath.row] から画像名を探し、UImage を設定
+        selectedImage = UIImage(named: photos[indexPath.row])
+        if selectedImage != nil {
+            // SubViewController へ遷移するために Segue を呼び出す
+            //performSegue(withIdentifier: "Detail",sender: nil)
+            // storyboardのインスタンス取得
+            let detailStoryboard: UIStoryboard = UIStoryboard(name: "Detail", bundle: nil)
+            // 遷移先ViewControllerのインスタンス取得
+            let detailView = detailStoryboard.instantiateViewController(withIdentifier: "Detail") as! DetailViewController
+            // 画面遷移
+            self.present(detailView, animated: false)
+
+        }
+ 
+    }
+}
