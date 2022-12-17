@@ -24,29 +24,6 @@ extension Bundle {
         return loaded
     }
 }
-//let postDatas: [PostJson] = Bundle.main.decodeJSON("Data.json")
-
-
-
-
-//extension Bundle {
-//    func decodeJSON<T: Codable>(_ file: String) -> T {
-//        guard let url = self.url(forResource: file, withExtension: nil) else {
-//            fatalError("Faild to locate \(file) in bundle.")
-//        }
-//        
-//        guard let data = try? Data(contentsOf: url) else {
-//            fatalError("Failed to load \(file) from bundle.")
-//        }
-//        
-//        let decoder = JSONDecoder()
-//        guard let loaded = try? decoder.decode(T.self, from: data) else {
-//            fatalError("Failed to decode \(file) from bundle.")
-//        }
-//        return loaded
-//    }
-//}
-//let postDatas: [PostJson] = Bundle.main.decodeJSON("Data.json")
 
 
 class ItiranViewController: UIViewController {
@@ -77,16 +54,6 @@ class ItiranViewController: UIViewController {
     
     override func viewDidLayoutSubviews(){
         super.viewDidLayoutSubviews()
-        // Segue 準備
-        //        func prepare(for segue: UIStoryboardSegue, sender: Any!) {
-        //            if (segue.identifier == "Detail") {
-        //                let detailVC: DetailViewController = (segue.destination as? DetailViewController)!
-        //                // DetailViewController のselectedImgに選択された画像を設定する
-        //                detailVC.selectedImg = selectedImage
-        //            }
-        //        }
-        //POSTDATAに入っているデータの確認用
-        //print("🟥全てのデータ\(POSTDATA)")
     
         collectionview.dataSource = self
         collectionview.delegate = self
@@ -129,10 +96,7 @@ extension UISearchBar {
             return value(forKey: "searchField") as? UITextField
         }
     }
-//    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-//            textField.resignFirstResponder()
-//            return true
-//        }
+
 }
 
 
@@ -147,9 +111,9 @@ extension ItiranViewController: UICollectionViewDataSource {
         cell.layer.borderColor = UIColor.lightGray.cgColor
         cell.layer.borderWidth = 0.5
         
-        if let cell = cell as? CustomCellCollectionViewCell {
-            cell.setupCell(model: models[indexPath.row])
-        }
+//        if let cell = cell as? CustomCellCollectionViewCell {
+//            cell.setupCell(model: models[indexPath.row])
+//        }
         return cell
     }
 }
