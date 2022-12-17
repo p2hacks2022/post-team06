@@ -46,16 +46,6 @@
                                     <action selector="PostButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oA9-Bo-YIR"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U9B-w4-R8d">
-                                <rect key="frame" x="269" y="476" width="42" height="85"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="仮"/>
-                                <connections>
-                                    <action selector="KariButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Htl-EB-PEb"/>
-                                    <segue destination="aVl-Kg-G3Y" kind="show" identifier="toDetail" animates="NO" id="GtA-0W-bQj"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mMs-gO-9B9">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
                                 <color key="backgroundColor" systemColor="labelColor"/>

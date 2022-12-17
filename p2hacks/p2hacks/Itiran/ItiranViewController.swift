@@ -43,12 +43,7 @@ class ItiranViewController: UIViewController {
         self.present(postView, animated: true, completion: nil)
     }
     @IBOutlet weak var PostButton: UIButton!
-    
-    @IBAction func KariButton(_ sender: Any) {
-        // Segueのidentifierを指定
-                self.performSegue(withIdentifier: "toDetail", sender: self)
-    }
-    
+        
     let models = PostJson.createModels()
     
     override func viewDidLayoutSubviews(){
