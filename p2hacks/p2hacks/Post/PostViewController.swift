@@ -47,13 +47,7 @@ class PostViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         let dateFormatter = DateFormatter()
         // DateFormatter を使用して書式とロケールを指定する
         dateFormatter.dateFormat = DateFormatter.dateFormat(fromTemplate: "yMMMdHms", options: 0, locale: Locale(identifier: "ja_JP"))
-        var data = ["name": subjectText.text!]
-        data.updateValue(hashtagText.text!, forKey: "hashtagOptional")
-        data.updateValue(String(0), forKey: "sorena")
-        data.updateValue("", forKey: "hashtag")
-        data.updateValue(dateFormatter.string(from: dt), forKey: "date")
-        data.updateValue(descriptionTextView.text!, forKey: "explanation")
-        data.updateValue((IMAGEURL?.absoluteString)!, forKey: "imageUrl")
+        let data = ["name": subjectText.text!,"hashtagOptional":hashtagText.text!,"sorena":String(0),"hashtag":"","date":dateFormatter.string(from: dt),"explanation":descriptionTextView.text!,"imageUrl":(IMAGEURL?.absoluteString)!]
         DBRef.child("postData").childByAutoId().setValue(data)
         subjectText.text = ""
         hashtagText.text = ""
