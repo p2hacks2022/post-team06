@@ -11,7 +11,13 @@ import RealmSwift
 class ItiranViewController: UIViewController {
     @IBOutlet weak var TitleImage: UIImageView!
     @IBOutlet weak var collectionview: UICollectionView! //collectionview
-    @IBOutlet weak var SearchBar: UISearchBar!
+    @IBOutlet weak var SearchBar: UISearchBar! //検索バー
+    @IBOutlet weak var TopButton: UIButton! //トップボタン
+    @IBOutlet weak var WordButton: UIButton! //言葉ボタン
+    @IBOutlet weak var PeopleButton: UIButton! //人ボタン
+    @IBOutlet weak var MusicButton: UIButton! //音楽ボタン
+    @IBOutlet weak var ThingButton: UIButton! //物事ボタン
+    
     @IBAction func PostButton(_ sender: Any) {
         // storyboardのインスタンス取得
         let postStoryboard: UIStoryboard = UIStoryboard(name: "Post", bundle: nil)
