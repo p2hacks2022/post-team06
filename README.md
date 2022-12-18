@@ -36,8 +36,6 @@
 <br><img src="https://user-images.githubusercontent.com/105780864/208280484-ef597cd2-f0a0-4ebc-a2ba-19bfde207721.png" width = 200>
 <br>・投稿画面で、画像選択をすると出てくる画面です。
 <br><img src="https://user-images.githubusercontent.com/105780864/208279973-7755ee6d-c2e7-4c38-9878-76b5751f3f78.png" width = 200>
-<br>・投稿画面でタグを選ぶとなる状態です。
-<br><img src="https://user-images.githubusercontent.com/105780864/208280508-544c05a7-b4ab-4d30-9391-5e7fa8633670.png" width = 200>
 
 
 
