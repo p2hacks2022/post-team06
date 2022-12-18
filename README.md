@@ -37,6 +37,8 @@
 <br>...  吉町優希：開発者
 
 開発における工夫した点  
+<br>・CocoaPodsを導入し、Firebaseとの値のやり取りをできるようにして、そのデータが保存・表示できるようにした。
+<br>・コーディング規約を作成し、それを遵守できるようにした。
 デザイン面
 <br>・若者向けのデザインにするために、文字での表現よりイラスト（アイコンなど）を使用した
 <br>・流行度合いを視覚的に見ることができるように「それなボタン」を導入した
@@ -45,10 +47,10 @@
 ## 開発技術 
 
 利用したプログラミング言語  
-...  swift
+...  Swift
 
 利用したフレームワーク・ライブラリ  
-...  UIKit、Realm
+...  UIKit、CocoaPods(FirebaseAuth,FirebaseFirestore,Firebase/Database,Firebase/Storage,FirebaseUI/Storage)
 
 その他開発に使用したツール・サービス
-...  Figma、PowerPoint、SF Symbols
+...  Figma、PowerPoint、SF Symbols、Discord、Slack
