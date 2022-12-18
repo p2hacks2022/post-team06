@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseStorageUI
 
 extension Bundle {
     func decodeJSON<T: Codable>(_ file: String) -> T {
@@ -24,32 +26,11 @@ extension Bundle {
         return loaded
     }
 }
-//let postDatas: [PostJson] = Bundle.main.decodeJSON("Data.json")
-
-
-
-
-//extension Bundle {
-//    func decodeJSON<T: Codable>(_ file: String) -> T {
-//        guard let url = self.url(forResource: file, withExtension: nil) else {
-//            fatalError("Faild to locate \(file) in bundle.")
-//        }
-//        
-//        guard let data = try? Data(contentsOf: url) else {
-//            fatalError("Failed to load \(file) from bundle.")
-//        }
-//        
-//        let decoder = JSONDecoder()
-//        guard let loaded = try? decoder.decode(T.self, from: data) else {
-//            fatalError("Failed to decode \(file) from bundle.")
-//        }
-//        return loaded
-//    }
-//}
-//let postDatas: [PostJson] = Bundle.main.decodeJSON("Data.json")
 
 
 class ItiranViewController: UIViewController {
+    //@IBOutlet weak var CustomCellCollectionViewCell: UICollectionViewCell!
+    
     @IBOutlet weak var TitleImage: UIImageView!
     @IBOutlet weak var collectionview: UICollectionView! //collectionview
     @IBOutlet weak var SearchBar: UISearchBar! //検索バー
@@ -70,23 +51,57 @@ class ItiranViewController: UIViewController {
     @IBOutlet weak var PostButton: UIButton!
     
     
-    let models = PostJson.createModels()
+    var models = [Collection]()
     
     var selectedImage: UIImage?
     let photos = ["1", "2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40","41","42","43","44","45","","46","47","48","49","50",]
     
+    override func viewDidLoad(){
+        super.viewDidLoad()
+        fetchData()
+    }
+    
+    
+    func fetchData(){
+        let fetchDataRef = Database.database().reference()
+        fetchDataRef.child("postData").observe(.childAdded, with: { snapshot in
+            let snapShotData = snapshot.value as AnyObject
+            let name = snapShotData.value(forKeyPath: "name") as! String
+            let taglabel = snapShotData.value(forKeyPath: "hashtag")
+            let count = snapShotData.value(forKeyPath: "sorena") as! String
+            let key = snapshot.key
+            
+            
+//            collectionview.NameLabel.text =  name as! String
+//            collectionview.TagLabel.text = taglabel as! String
+//            collectionview.SorenaLabel.text = count as! String
+            var tag: String = ""
+            if(Int(taglabel as! String)==1){
+                tag = "# 人"
+            }
+            if(Int(taglabel as! String)==2){
+                tag = "# 物事"
+            }
+            if(Int(taglabel as! String)==3){
+                tag = "# 曲"
+            }
+            if(Int(taglabel as! String)==4){
+                tag = "# 言葉"
+            }
+            if(Int(taglabel as! String)==5){
+                tag = "# 食べ物"
+            }
+            let collectioninfo = Collection(name: name, tag: tag, sorena: count, mainimage: key)
+            self.models.append(collectioninfo)
+            //self.timeLabel.text = record_time as? String
+            self.collectionview.reloadData()
+        })
+    }
+//    var cell = CustomCellCollectionViewCell()
+//    cell.NameLabel.text = "yeah"
+    
     override func viewDidLayoutSubviews(){
         super.viewDidLayoutSubviews()
-        // Segue 準備
-        //        func prepare(for segue: UIStoryboardSegue, sender: Any!) {
-        //            if (segue.identifier == "Detail") {
-        //                let detailVC: DetailViewController = (segue.destination as? DetailViewController)!
-        //                // DetailViewController のselectedImgに選択された画像を設定する
-        //                detailVC.selectedImg = selectedImage
-        //            }
-        //        }
-        //POSTDATAに入っているデータの確認用
-        //print("🟥全てのデータ\(POSTDATA)")
     
         collectionview.dataSource = self
         collectionview.delegate = self
@@ -129,15 +144,13 @@ extension UISearchBar {
             return value(forKey: "searchField") as? UITextField
         }
     }
-//    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-//            textField.resignFirstResponder()
-//            return true
-//        }
+
 }
 
-
+//セル数
 extension ItiranViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        //return numChildren().count
         return models.count
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

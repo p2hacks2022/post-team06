@@ -69,7 +69,7 @@
                 <outlet property="NameLabel" destination="lBt-Wv-Xd3" id="YrP-ox-xsw"/>
                 <outlet property="SorenaImage" destination="EGV-V4-fyb" id="nq4-ws-u5g"/>
                 <outlet property="SorenaLabel" destination="XVa-aU-Y65" id="HRt-Lm-Dfb"/>
-                <outlet property="TagLabel" destination="ORp-Kb-Dyz" id="pf3-hD-u6x"/>
+                <outlet property="TagLabel" destination="ORp-Kb-Dyz" id="FEV-3e-Hyg"/>
             </connections>
             <point key="canvasLocation" x="123.66412213740458" y="32.74647887323944"/>
         </collectionViewCell>

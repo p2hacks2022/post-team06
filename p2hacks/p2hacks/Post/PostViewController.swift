@@ -290,6 +290,7 @@ class PostViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         let dateFormatter = DateFormatter()
         // DateFormatter を使用して書式とロケールを指定する
         dateFormatter.dateFormat = DateFormatter.dateFormat(fromTemplate: "yMMMdHms", options: 0, locale: Locale(identifier: "ja_JP"))
+
         
         //        post.sorena = 0
         //        post.name = subjectText.text!
