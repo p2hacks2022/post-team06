@@ -30,11 +30,11 @@
 
 スクリーンショット(任意)
 <br>以下の添付画像は全て、実際にビルドした実際の画面になります。
-<br>アイコンとアプリ名が表示されている画面です。
+<br>・アイコンとアプリ名が表示されている画面です。
 <br><img src="https://user-images.githubusercontent.com/69063870/208279289-d34a895f-eaad-41ba-81aa-69a87a9542ec.PNG" width = 200>
-<br>投稿画面で、画像選択をすると出てくる画面です。
+<br>・投稿画面で、画像選択をすると出てくる画面です。
 <br><img src="https://user-images.githubusercontent.com/105780864/208279973-7755ee6d-c2e7-4c38-9878-76b5751f3f78.png" width = 200>
-<br>画像を選択すると、以下の画面のように変更されます。
+<br>・画像を選択すると、以下の画面のように変更されます。
 <br><img src="https://user-images.githubusercontent.com/105780864/208279975-43cd8ac3-2ef0-48ae-864a-5665ffcc9aa2.png" width = 200>
 
 ## 開発体制  
