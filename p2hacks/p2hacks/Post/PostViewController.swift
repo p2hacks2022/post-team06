@@ -103,9 +103,9 @@ class PostViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         })
         //ここから
         //storageのURLを参照
-        let storageref = Storage.storage().reference(forURL: "gs://p2hacks-8da7c.appspot.com").child("1.png")
-        //画像をセット
-        imageView.sd_setImage(with: storageref)
+//        let storageref = Storage.storage().reference(forURL: "gs://p2hacks-8da7c.appspot.com").child("1.png")
+//        //画像をセット
+//        imageView.sd_setImage(with: storageref)
         //表示ここまで
         
         //imageViewにタップ判定をつけるためのもの
