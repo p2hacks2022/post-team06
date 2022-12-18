@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 55;
+	objectVersion = 56;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -669,6 +669,7 @@
 				DEVELOPMENT_TEAM = S539G95T8G;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = p2hacks/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "BUZZってる";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Itiran;
@@ -699,6 +700,7 @@
 				DEVELOPMENT_TEAM = S539G95T8G;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = p2hacks/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "BUZZってる";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Itiran;
