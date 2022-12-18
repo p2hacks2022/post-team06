@@ -31,6 +31,8 @@
 スクリーンショット(任意)
 <br>アイコンとアプリ名が表示されている画面です。
 <br><img src="https://user-images.githubusercontent.com/69063870/208279289-d34a895f-eaad-41ba-81aa-69a87a9542ec.PNG" width = 200>
+<br><img src="https://user-images.githubusercontent.com/105780864/208279973-7755ee6d-c2e7-4c38-9878-76b5751f3f78.png" width = 200>
+<br><img src="https://user-images.githubusercontent.com/105780864/208279975-43cd8ac3-2ef0-48ae-864a-5665ffcc9aa2.png" width = 200>
 
 ## 開発体制  
 
